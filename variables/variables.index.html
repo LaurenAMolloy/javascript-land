@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>JavaScript Land</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link active">Home</a></li>
+                <li><a href="/types/types.html" class="nav-link">Types</a></li>
+                <li><a href="/variables/variables.index.html" class="nav-link">Variables</a></li>
+                <li><a href="strings.html" class="nav-link">Strings</a></li>
+                <li><a href="decisions.html" class="nav-link">Decisions</a></li>
+                <li><a href="arrays.html" class="nav-link">Arrays</a></li>
+                <li><a href="objects.html" class="nav-link">Objects</a></li>
+                <li><a href="loops.html" class="nav-link">Loops</a></li>
+                <li><a href="functions.html" class="nav-link">Functions</a></li>
+                <li><a href="array-methods.html" class="nav-link">Array Methods</a></li>
+                <li><a href="dom.html" class="nav-link">DOM</a></li>
+                <li><a href="async.html" class="nav-link">Async</a></li>
+                <li><a href="proptypes.html" class="nav-link">PropTypes</a></li>
+                <li><a href="classes.html" class="nav-link">Classes & OOP</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Variables</h1>
+                <h2 class="hero-subtitle">What are variables?</h2>
+                <p>
+                    Variable are a way of giving a name to a value and store it in order to reuse it. We can think of it
+                    as a jar with a label in. How do we do this? The basic syntax is <code>let year = 1985</code>. Here
+                    we are saying to JavaScript store the number 1985 to the variable year. This is called declaring a
+                    variable! We use the keyword let, variable name and then assign the value.
+                </p>
+                <img src="" alt="variable jar">
+            </div>
+        </section>
+        <section>
+            <h2>Updating Variables</h2>
+            <p>
+                How do we update variables? There is a shorthand syntax we can use to update a variable. Here is an
+                example using score: <code>score += 7</code>. It is also super common to see the increment and decrement
+                operator which is basically <code>++</code> and <code>--</code>.
+            </p>
+            <img src="" alt="updating a score in JavaScript">
+            <h3>I++ vs ++I</h3>
+            <p>
+                A common source fo confusion for beginners is often the difference between <code>i++</code> and
+                <code>++i</code>. When we use <code>i++</code> the code will be executed, but the value returned will be
+                the value prior to expression. The prefix operator increments the value first and then returns the new
+                updated value.
+            </p>
+        </section>
+        <section>
+            <h2>Const</h2>
+            <div class="const">
+                <p>
+                    Const means constant! This is value that cannot be changed. If we try to change a const value we
+                    will get an
+                    error message! For example pi will always be 3.14 and days of the week will always be 7. When we get
+                    to
+                    arrays and objects const is super useful!
+                </p>
+                <img src="/assets/img/const.png" alt="reference error">
+            </div>
+            <h2>Var </h2>
+            <div class="var">
+                <p>
+                    This is an old way to declare variables. It works in a similar way to let. This was orginally the
+                    only way to declare varaiables. You should not use it when writing modern JavaScript.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Booleans</h2>
+            <p>
+                Booleans are used to store yes or no values. They pay an important role in using logic in our
+                programming
+                and are stores as true or false. Variables can store booleans. Variables can also change type so a
+                boolean could become a number.
+            </p>
+        </section>
+        <section>
+            <h2>Naming Conventions</h2>
+            <p>
+                When naming a variable, creating an identifier there are some hard rules and best practice to follow...
+            </p>
+            <ul>
+                <li>Must not begin with a number</li>
+                <li>Variable names should be in camelCase!</li>
+                <li>First leter is not capital</li>
+                <li>Do not give obscure names like n or x.</li>
+                <li>Create meaningful names</li>
+                <li>Boolean names generally start with is e.g isGamerOver</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

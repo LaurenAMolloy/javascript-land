@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>JavaScript Land</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link active">Home</a></li>
+                <li><a href="/types/types.html" class="nav-link">Types</a></li>
+                <li><a href="/variables/variables.index.html" class="nav-link">Variables</a></li>
+                <li><a href="strings.html" class="nav-link">Strings</a></li>
+                <li><a href="decisions.html" class="nav-link">Decisions</a></li>
+                <li><a href="arrays.html" class="nav-link">Arrays</a></li>
+                <li><a href="objects.html" class="nav-link">Objects</a></li>
+                <li><a href="loops.html" class="nav-link">Loops</a></li>
+                <li><a href="functions.html" class="nav-link">Functions</a></li>
+                <li><a href="array-methods.html" class="nav-link">Array Methods</a></li>
+                <li><a href="dom.html" class="nav-link">DOM</a></li>
+                <li><a href="async.html" class="nav-link">Async</a></li>
+                <li><a href="proptypes.html" class="nav-link">PropTypes</a></li>
+                <li><a href="classes.html" class="nav-link">Classes & OOP</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Strings</h1>
+                <p class="hero-subtitle">What are strings?</p>
+                <p>
+                    A string is a string of characters, a primitive type wrapped in quotes. Strings are used to store
+                    textual information. In a single file choose whether to use double or single quotes to wrap your
+                    strings.
+                    Be consistent!
+                </p>
+            </div>
+            <div class="hero-visual">
+                <div class="code-block">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="code-title">string.js</span>
+                    </div>
+                    <div class="code-content">
+                        <pre><code>let userName = "Lauren"</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Indices and Length</h2>
+            <p>
+                Strings are indexed. This means that each letter has a corresponding index (a positional number). Why
+                does this matter? This matters because we can use this positioning to access individual characters. We
+                can do this using square brackets. Every string has a built in propery called .length. We can use this
+                to find the number of characters, not the same as the index. The index is always one less because it
+                starts with 0. We can also add strings together, this is called concatenation.
+            </p>
+            <img src="" alt="strings in the console">
+        </section>
+        <section>
+            <h2>String methods</h2>
+            <p>
+                There are many methods that we can use on strings. We can change it to lowercase, uppercase and
+                remove elements. This is how we implement it. <code>thing.methd()</code>. Strings are immutable so
+                we are making a new version with these methods. Don't forget the parens at the end to make sure you
+                actually run the methods.
+                <img src="" alt="">
+            <h3>toUpperCase()</h3>
+            <h3>trim()</h3>
+            <h3>Chaining methods</h3>
+            <img src="" alt="code showing string methods">
+        </section>
+        <section>
+            <h2>String Methods with Inputs</h2>
+            <p>
+                We cannot pass values to every single method, but for <code>indexOf</code> this will give us the index
+                position of the argument. We cannot find multiple occurances using indexof. If there is no matching
+                element then we will get <code>-1</code> returned!
+            </p>
+            <h3>Slice</h3>
+            <p>We can pass in two indices, a begin and an end(end is optional).</p>
+        </section>
+        <section>
+            <h2>Naming Conventions</h2>
+            <p>
+                When naming a variable, creating an identifier there are some hard rules and best practice to follow...
+            </p>
+            <ul>
+                <li>Must not begin with a number</li>
+                <li>Variable names should be in camelCase!</li>
+                <li>First leter is not capital</li>
+                <li>Do not give obscure names like n or x.</li>
+                <li>Create meaningful names</li>
+                <li>Boolean names generally start with is e.g isGamerOver</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+
+</html>
