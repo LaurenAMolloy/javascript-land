@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>String</title>
     <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 </head>
 
 <body>
@@ -98,21 +99,32 @@
                 element then we will get <code>-1</code> returned!
             </p>
             <h3>Slice</h3>
-            <p>We can pass in two indices, a begin and an end(end is optional).</p>
+            <p>We can pass in two indices, a begin and an end(end is optional).<code>slice()</code>. Slice will return a
+                portion of an array. For example if we were to write
+                <code>arr.slice(0)</code> we do not specify an end to we have the whole NEW string returned, the
+                original stays the same. The begin index tells slice where to begin extraction. The end index tell
+                JavaScript where to go up to but not including!
+            </p>
+            <img src="" alt="slice example">
+            <h3>Replace</h3>
+            <p>We can use replace() to replace elements.</p>
+            <h3>Repeat</h3>
+            <p>
+                We can use Repeat to Repeat elements.
+                There is no way to memorize all of the string methods, we simply don't have the time. But we always
+                refer
+                to the <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">docs!</a>
+            </p>
         </section>
         <section>
-            <h2>Naming Conventions</h2>
+            <h2>Template Literals</h2>
             <p>
-                When naming a variable, creating an identifier there are some hard rules and best practice to follow...
+                Template literals are super useful! We can use them to print out a string and embed expressions. Using
+                concatenation is kind of clunky. They are a newer syntax. For example:
+                <code>`I counted ${3 + 4} sheep`</code>. To use template literals you can start with back ticks and the
+                expression should be contained in a dollar sign with curly braces.
             </p>
-            <ul>
-                <li>Must not begin with a number</li>
-                <li>Variable names should be in camelCase!</li>
-                <li>First leter is not capital</li>
-                <li>Do not give obscure names like n or x.</li>
-                <li>Create meaningful names</li>
-                <li>Boolean names generally start with is e.g isGamerOver</li>
-            </ul>
         </section>
     </main>
 

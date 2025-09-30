@@ -21,6 +21,14 @@ img {
     max-width: 100%;
 }
 
+ul>li {
+    list-style: none;
+}
+
+code {
+    color: #ff4081;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -31,7 +39,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0px 20px;
 }
 
 /* Header and Navigation */
@@ -103,8 +111,8 @@ body {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--pink), var(--purple));
-    color: var(--white);
-    padding: 4rem 2rem;
+    color: var(--dark);
+    padding: 6rem 2rem;
     display: flex;
     align-items: center;
     min-height: 70vh;
@@ -285,6 +293,65 @@ body {
 
 .topic-link:hover {
     color: var(--purple);
+}
+
+/* Content Section */
+.content {
+    padding-top: 2rem;
+}
+
+.logo {
+    max-width: 30%;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+
+.content {
+    display: flex;
+}
+
+/* Types Section */
+
+.types {
+    padding-bottom: 1rem;
+}
+
+.types>h3 {
+    padding-top: 1rem;
+}
+
+.types ul {
+    padding: 1rem 0;
+}
+
+.console-code {
+    padding-top: 1rem
+}
+
+.primitives {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.content-text {
+    width: 40%;
+}
+
+.content-img {
+    width: 40%;
+}
+
+.content-img img {
+    border: 2px solid #e040fb;
+    border-radius: 10px;
+}
+
+hr {
+    background-color: #e040fb;
+    margin: 2rem auto;
+    width: 80%;
+
 }
 
 /* Footer */
