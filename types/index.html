@@ -122,10 +122,28 @@
                 <p>
                     There are two primitive types which are very simple compared to strings. Both are single values like
                     true or false. Undefined is returned when we try to access a value that is not there. For example
-                    <code>const userName</code>. Whereas null is the intentional lack of a value. For example if a user
+                    <code>const userName</code>. Undefined is something we will run into very often! Whereas null is the
+                    intentional lack of a value. For example if a user
                     ins not logged in, but we expect one at a later date we can do
                     this...<code>let loggedInUser = null</code>
+                <div class=""></div>
                 </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h3>The Math Object</h3>
+                <p>
+                    The math object contains properties for math constants and functions! To access these we can use the
+                    following syntax <code>Math.floor()</code>. Math.floor will take a number and chop off the decimal.
+                    This
+                    is not rounding for this we need Math.round(). We are lookign at Math.random() and this gives us a
+                    random number between 0 and 1. Most of the time we want a whole number, not just a decimal. Let's
+                    say we
+                    want a random number bewteeen 1 and 10. This is the approach we will
+                    take..<code>Math.floor(Math.random() * 5) + 1</code>. We add 1 because Math.random starts at 0!
+                </p>
+                <img src="/assets/img/math_random.png">
             </div>
         </section>
     </main>
