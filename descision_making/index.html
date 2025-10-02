@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variables</title>
+    <title>Decision Making JavaScript</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="/styles.css">
     <script src="/app.js" defer></script>
@@ -39,7 +39,6 @@
             </div>
         </nav>
     </header>
-
     <main class="main">
         <section class="hero">
             <div class="hero-content">
@@ -49,99 +48,148 @@
                     You should care about these concepts as they apply to any programming language. For example we can
                     use
                     boolean logic for multiple interactions with a website or app. If we like a post and it has a heart
-                    or thumbs up, that is a decision that we can make via our code.
+                    or thumbs up, that is a logical decision that we can make via our code.
                 </p>
-                <img src="" alt="thumbs up">
+            </div>
+            <div class="hero-image thumbs-up">
+                <img src="/assets/img/thumbs-up.png" alt="thumbs up">
             </div>
         </section>
         <section>
-            <h2>Comparison Operators</h2>
-            <p>
-                We often need to compare values to make a decision in JavaScript. For example we can check if a value is
-                greater or less than another and it will give us a boolean value(true or false).
-                We will commonly use the following comparison operators:
-            </p>
-            <ul>
-                <li> Greater than<code> > </code> </li>
-                <li> Greater than or equal to >= </li>
-                <li> Less than < </li>
-                <li> Less than or equal to <= </li>
-                <li> Loosley equal to == </li>
-                <li> Strictly equal to === </li>
-                <li> Not equal to != </li>
-                <li> Strictly not equal to !== </li>
-            </ul>
-            <h3>Triple vs Double Equals</h3>
-            <p>
-                This is often a source of confusion! If we compare a string of 1 and a number of 1 they will be
-                considered the same. JavaScript will coerce the values to the same type. However triple equals does care
-                about type and when we compare a string and a number we will get a false value. A similar concept is
-                applied when we use the bang equals like so <code>!=</code>. The big takeway here is always use tripe
-                equals as not checking types can cause unexpected bugs!</p>
-
-        </section>
-        <section>
-            <h2>Console, Alert and Prompt</h2>
-            <div>
+            <div class="container">
+                <h2>Comparison Operators</h2>
                 <p>
-                    <code>Console</code> is an object and we will be using it alot. There are a few methods attached to
-                    the console that we will be making use of! We can log a message, error or warning to the console. We
-                    can use <code>alert</code> to create a pop up in the browser and give a message to the user. We can
-                    also use a prompt to collect user data, although this is not common. Forms are the way to go!
+                    We often need to compare values to make a decision in JavaScript. For example we can check if a
+                    value is
+                    greater or less than another and it will give us a boolean value(true or false).
+                    We will commonly use the following comparison operators:
                 </p>
-                <img src="" alt="code displaying console, alert and Prompt">
+                <ul>
+                    <li> Greater than<code> > </code> </li>
+                    <li> Greater than or equal to >= </li>
+                    <li> Less than < </li>
+                    <li> Less than or equal to <= </li>
+                    <li> Loosley equal to == </li>
+                    <li> Strictly equal to === </li>
+                    <li> Not equal to != </li>
+                    <li> Strictly not equal to !== </li>
+                </ul>
+                <h3>Triple vs Double Equals</h3>
+                <p>
+                    This is often a source of confusion! If we compare a string of 1 and a number of 1 they will be
+                    considered the same. JavaScript will coerce the values to the same type. However triple equals does
+                    care
+                    about type and when we compare a string and a number we will get a false value. A similar concept is
+                    applied when we use the bang equals like so <code>!=</code>. The big takeway here is always use
+                    tripe
+                    equals as not checking types can cause unexpected bugs!</p>
             </div>
         </section>
         <section>
-            <h2>Conditional Statements</h2>
-            <div class="if">
-                <h3>If Statements</h3>
-                <p>
-                    <code>If</code> statement only runs if the condition is true! The condition only applies to the code
-                    inside the if statement! The syntax is like
-                    this:<code>if(something is true or false) {do this}</code>
-                </p>
-                <img src="/assets/img/if.png" alt="if statment">
+            <div class="container">
+                <h2>Console, Alert and Prompt</h2>
+                <div>
+                    <p>
+                        <code>Console</code> is an object and we will be using it alot. There are a few methods attached
+                        to
+                        the console that we will be making use of! We can log a message, error or warning to the
+                        console. We
+                        can use <code>alert</code> to create a pop up in the browser and give a message to the user. We
+                        can
+                        also use a prompt to collect user data, although this is not common. Forms are the way to go!
+                    </p>
+                    <img src="" alt="code displaying console, alert and Prompt">
+                </div>
             </div>
-            <div class=" else if">
-                <h3>ELSE If Statements</h3>
-                <p>
-                    <code>Else If</code> statement has two branchs of logic. Only one branch will run based on if the
-                    condition is met! The syntax is like
-                    this:<code>if(the condition is met) {do this} else {if the first is false do this instead}</code>
-                </p>
-                <img src="/assets/img/else-if.png" alt="else if statment">
-            </div>
-            <div class=" else">
-                <h3>ELSE Statement</h3>
-                <p>
-                    <code>Else</code> is the last statement is nothing else is true do this. If anything was true along
-                    the way we would not reach the else!
-                </p>
-                <img src="/assets/img/else.png" alt="else statment">
+        </section>
+        </div>
+        <section>
+            <div class="container">
+                <h2>Conditional Statements</h2>
+                <div class="if">
+                    <h3>If Statements</h3>
+                    <p>
+                        <code>If</code> statement only runs if the condition is true! The condition only applies to the
+                        code
+                        inside the if statement! The syntax is like
+                        this:<code>if(something is true or false) {do this}</code>
+                    </p>
+                    <img src="/assets/img/if.png" alt="if statment">
+                </div>
+                <div class=" else if">
+                    <h3>ELSE If Statements</h3>
+                    <p>
+                        <code>Else If</code> statement has two branchs of logic. Only one branch will run based on if
+                        the
+                        condition is met! The syntax is like
+                        this:<code>if(the condition is met) {do this} else {if the first is false do this instead}</code>
+                    </p>
+                    <img src="/assets/img/else-if.png" alt="else if statment">
+                </div>
+                <div class=" else">
+                    <h3>ELSE Statement</h3>
+                    <p>
+                        <code>Else</code> is the last statement is nothing else is true do this. If anything was true
+                        along
+                        the way we would not reach the else!
+                    </p>
+                    <img src="/assets/img/else.png" alt="else statment">
+                </div>
             </div>
         </section>
         <section>
-            <h2>Nesting</h2>
-            <p>Nesting Conditionals!</p>
-            <form>
-                <input type="password" id="password" name="password">
-                <input type="submit">
-            </form>
+            <div class="container">
+                <h2>Nesting</h2>
+                <p>Nesting Conditionals!</p>
+                <form>
+                    <label for="password">Enter Password</label>
+                    <input type="password" id="password" name="password">
+                    <input type="submit">
+                </form>
+            </div>
         </section>
         <section>
-            <h2>Truthy and Falsey Values!</h2>
-            <p>There are only two values that are true or false, but other values have a truthyness or falsyness to
-                them. This matters for a few reasons. The following values are falsy!</p>
-            <ul>
-                <li>false</li>
-                <li>null</li>
-                <li>undefined</li>
-                <li>""</li>
-                <li>0</li>
-                <li>NaN</li>
-            </ul>
-            <img src="" alt="truthy and falsy values">
+            <div class="container">
+                <h2>Truthy and Falsey Values!</h2>
+                <p>There are only two values that are true or false, but other values have a truthyness or falsyness to
+                    them. This matters for a few reasons. The following values are falsy!</p>
+                <ul>
+                    <li>false</li>
+                    <li>null</li>
+                    <li>undefined</li>
+                    <li>""</li>
+                    <li>0</li>
+                    <li>NaN</li>
+                </ul>
+                <img src="" alt="truthy and falsy values">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Logical Operators</h2>
+                <h3>AND && OR || NOT</h3>
+                <p>
+                    The syntax for the AND operator is double ampersand. We would have two expressions and if both sides
+                    are
+                    true then the whole expression is true! For example we could use this in our password
+                    example...<code>if(password.length >= 6 && password.indexOf('') === -1) {console.log("Valid Passord")}</code>.
+                    The OR operator behaves differently than and and only cares if one side of the expression evaluates
+                    to
+                    true! AND has precedence over OR, you can add parentheses to highlight this. The NOT operator
+                    inverts the value. If we put it infront of a false value it will reurn false and vice versa
+                </p>
+                <img src="" alt="AND OR operators in JavaScript">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>The Mighty Switch</h2>
+                <p>The switch statement is another control flow statement that can replace multiple if statements. It is
+                    the least important concepts in this section and not used commonly. There are a few keyowrds to
+                    remember <code>switch</code> and <code>case</code>.When ever there is a match the code will keep
+                    going until we hit a break. So <code>break</code> should be added after each case </p>
+                <img src="" alt="switch statement">
+            </div>
         </section>
     </main>
 </body>

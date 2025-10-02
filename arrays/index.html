@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>JavaScript Land</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link active">Home</a></li>
+                <li><a href="/types/types.html" class="nav-link">Types</a></li>
+                <li><a href="/variables/variables.index.html" class="nav-link">Variables</a></li>
+                <li><a href="strings/strings.html" class="nav-link">Strings</a></li>
+                <li><a href="decisions.html" class="nav-link">Decisions</a></li>
+                <li><a href="arrays.html" class="nav-link">Arrays</a></li>
+                <li><a href="objects.html" class="nav-link">Objects</a></li>
+                <li><a href="loops.html" class="nav-link">Loops</a></li>
+                <li><a href="functions.html" class="nav-link">Functions</a></li>
+                <li><a href="array-methods.html" class="nav-link">Array Methods</a></li>
+                <li><a href="dom.html" class="nav-link">DOM</a></li>
+                <li><a href="async.html" class="nav-link">Async</a></li>
+                <li><a href="proptypes.html" class="nav-link">PropTypes</a></li>
+                <li><a href="classes.html" class="nav-link">Classes & OOP</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Arrays</h1>
+                <h2 class="hero-subtitle">Data Structures in JavaScript</h2>
+                <p>
+                    A data structure is a structure containign a collection of data. For example we can have a variable
+                    that holds four different strings in a single array or a collection of ordered data. Examples of
+                    arrays include playlists, levels in a game, and comments on posts. How do we make an array? We use
+                    square brackets on the right side of an equal sign. Do not try and check the type of array using
+                    <code>typeOf</code>! You will have a bad time.
+                </p>
+            </div>
+            <div class="hero-image array">
+                <img src="/assets/img/noun-array-2732962.png" alt="array">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Arrays</h2>
+                <p>
+                    Const is commonly used to initiate an array. If we take a look in dev tools. We can see the contents
+                    of our array. An array can hold multiple data types. Arrays have a built in property called length.
+                    Similar to a string.
+                </p>
+                <img src="" alt="arrays">
+                <h3>How do we access elements in an array?</h3>
+                <p>
+                    Let's talk about getting data out of an array! Arrays are zero indexed, each element has it's own
+                    index and we start counting at zero. These indices are important beacuse we can access elements
+                    using this index. The length is always one more than the index. In the example we can see length is
+                    3, but if we try to access an element and index 3 we get undefined! We can update an array like
+                    so...<code>days[3]="thursday"</code>
+                </p>
+                <img src="" alt="updating array">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Adding and Removing Elements</h2>
+                <div>
+                    <p>
+                        We can use the following built in array methods to add or remove elements to an array..Think of
+                        the array as a stack, we add one to the end using push and use pop to remove one. Shift is to
+                        remove one for the start and unshift adds an element. Shift returns the element that is removed.
+                    </p>
+                    <ul>
+                        <li><code>push</code>-add to the end</li>
+                        <li><code>pop</code>-remove from the end</li>
+                        <li><code>shift</code>remove from the start</li>
+                        <li><code>unshift</code>add to the start</li>
+                    </ul>
+                </div>
+                <h3>Examples</h3>
+            </div>
+        </section>
+        </div>
+        <section>
+            <div class="container">
+                <h2>concat, indexOf, Includes, Reverse</h2>
+                <div class="info">
+                    <h3>Concat</h3>
+                    <div class="info-text">
+                        <p>Concat can be used to join two arrays together</p>
+                    </div>
+                    <div class="info-img">
+
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Includes</h3>
+                    <div class="info-text">
+                        <p>
+                            Includes will return a boolean value and can be used to see if an array includes a
+                            particularc element.
+                        </p>
+                    </div>
+                    <div class="info-img"></div>
+                </div>
+                <div class="info">
+                    <h3>indexOf</h3>
+                    <div class="info-text">
+                        <p>
+                            indexOf will return -1 if the element is not in the array and 1 if it is found.
+                        </p>
+                    </div>
+                    <div class="info-img"></div>
+                </div>
+                <div class="info">
+                    <div class="info-text">
+                        <p>
+                            Reverse is a destructive method and will return a reversed array
+                        </p>
+                    </div>
+                    <div class="info-img"></div>
+                </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="info">
+                    <h3>Slice</h3>
+                    <div class="info-text">
+                        <p>
+                            Slice will return a portion of an array. We can pass in a starting point and then we can get
+                            a portion from the element at the starting index to the last index. If we pass in a second
+                            argument, an end, it will stop but not include that index.
+                        </p>
+                    </div>
+                    <div class="info-img slice"></div>
+                </div>
+                <div class="info">
+                    <h3>Splice</h3>
+                    <div class="info-text">
+                        <p>
+                            When we use splice it is a descrutctive methods. We pass in three
+                            arguments<code>(start, amount of elements to delete, element to insert)</code>. The orginal
+                            is mutated and we
+                            will get the new array returned.
+                        </p>
+                    </div>
+                    <div class="info-img slice"></div>
+                </div>
+                <div class="info">
+                    <h3>Sort</h3>
+                    <div class="info-text">
+                        <p>
+                            How can we sort an array? We need a compare function. The default sort method will convert
+                            everything to strings and compare the UTF-16 code unit values. This creates unexpected
+                            results.
+                        </p>
+                    </div>
+                    <div class="info-img slice"></div>
+                </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Our Friends the Equality Operators</h2>
+                <p>
+                    If we compare an array with another array using the strictly equal operator we will get false. Why
+                    is this? Well this is because JavaScript is not comparing the values inside. What JavaScript cares
+                    about is the reference in memory. If we store a number we will use a certain amount of memory. But
+                    with arrays this is not the case. Array are stored differently. Arrays are stored using an address
+                    that points to the contents.
+                    <code>[1, 2, 3] === [1, 2, 3]<span>//false</span></code>.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Const and Arrays</h2>
+                <p>
+                    When we make an array and use const we can update the content of the array. As long as the reference
+                    remains we can change the contents without getting an error. We cannot reassign the reference.
+                </p>
+                <img src="" alt="AND OR operators in JavaScript">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Multidimenional Arrays</h2>
+                <p>
+                    Nested arrays are great for games like tic tac toe. We access the elements in exactly the same way.
+                    <code>gameBoard[1][1]</code>. We just chain square brackets to access the elements.
+                </p>
+                <img src="" alt="switch statement">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

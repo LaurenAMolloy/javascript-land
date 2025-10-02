@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>JavaScript Land</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link active">Home</a></li>
+                <li><a href="/types/types.html" class="nav-link">Types</a></li>
+                <li><a href="/variables/variables.index.html" class="nav-link">Variables</a></li>
+                <li><a href="strings/strings.html" class="nav-link">Strings</a></li>
+                <li><a href="decisions.html" class="nav-link">Decisions</a></li>
+                <li><a href="arrays.html" class="nav-link">Arrays</a></li>
+                <li><a href="objects.html" class="nav-link">Objects</a></li>
+                <li><a href="loops.html" class="nav-link">Loops</a></li>
+                <li><a href="functions.html" class="nav-link">Functions</a></li>
+                <li><a href="array-methods.html" class="nav-link">Array Methods</a></li>
+                <li><a href="dom.html" class="nav-link">DOM</a></li>
+                <li><a href="async.html" class="nav-link">Async</a></li>
+                <li><a href="proptypes.html" class="nav-link">PropTypes</a></li>
+                <li><a href="classes.html" class="nav-link">Classes & OOP</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Getting Loopy!</h1>
+                <h2 class="hero-subtitle">Do I need to repeat myself?</h2>
+                <p>
+                    The whole point of a loop is to repeat some sort of functionality. A real world example of a loop
+                    would be comments to be displayed under a post. All the comments in the array will be looped over
+                    and displayed on the page.
+                </p>
+            </div>
+            <div class="hero-image array">
+                <img src="" alt="loop">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Our First For Loop</h2>
+                <p>
+                    The syntax for a for loop looks like this: <code>for(<br>[initial expression];<br>
+                    [condition];<br>
+                    [incrementExpression]<br>
+                    )</code>
+                </p>
+                <img src="" alt="loops">
+                <h3>How does the for loop work?</h3>
+                <p>
+                    First we create a variable called i, the middle part is a boolean and as long as it is true the loop
+                    will keep running, the final part is an increment operator that will update i.
+                </p>
+                <img src="" alt="for-loop">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>More For Loops</h2>
+                <div>
+                    <p>
+                        How do we make a loop that prints even numbers?
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        How do we make a loop that prints odd numbers?
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        How do we make a loop that counts down from 100?
+                    </p>
+                </div>
+        </section>
+        </div>
+        <section>
+            <div class="container">
+                <h2>infinite loops = infinite pain</h2>
+                <div class="info">
+                    <div class="info-text">
+                        <p>
+                            Infinite loops are not great. Your loop will not stop! This is something that you should not
+                            run and always check the conditions carefully before you run any loops!
+                            <code>for(let i = 20; i >= 0. i++){console.log("do not run this loop")}</code>
+                        </p>
+                    </div>
+                    <div class="info-img">
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Looping Arrays</h3>
+                    <div class="info-text">
+                        <p>
+                            Here is a more detailed account of how the for loop works...i is the varaible we use as a
+                            counter and starts at zero, the first position in the array. With every loop this counter
+                            incraeses by 1. This varaibel keeps track of which position we are looking at. So we can use
+                            i to access each element in teh array like so...
+                        </p>
+                        <ul>
+                            <li>animals[0] "dog"</li>
+                            <li>animals[1] "cat"</li>
+                            <li>animals[2] "elephant"</li>
+                        </ul>
+                    </div>
+                    <div class="info-img"></div>
+                </div>
+                <div class="info">
+                    <h3>Nested Loops</h3>
+                    <div class="info-text">
+                        <p>
+                            We can nested loops. In practice this means for every time the outer loop runs the inner
+                            loop will run for a full cycle. Our outer loop is running 10 time. We then have 4 interation
+                            for the inside loop. One common area when we use this loop is when we want to traverse a
+                            nested array.
+                        </p>
+                    </div>
+                    <div class="info-img"></div>
+                </div>
+                <div class="info">
+                    <div class="info-text">
+                        <p>
+                            Reverse is a destructive method and will return a reversed array
+                        </p>
+                    </div>
+                    <div class="info-img"></div>
+                </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="info">
+                    <h3>Slice</h3>
+                    <div class="info-text">
+                        <p>
+                            Slice will return a portion of an array. We can pass in a starting point and then we can get
+                            a portion from the element at the starting index to the last index. If we pass in a second
+                            argument, an end, it will stop but not include that index.
+                        </p>
+                    </div>
+                    <div class="info-img slice"></div>
+                </div>
+                <div class="info">
+                    <h3>Splice</h3>
+                    <div class="info-text">
+                        <p>
+                            When we use splice it is a descrutctive methods. We pass in three
+                            arguments<code>(start, amount of elements to delete, element to insert)</code>. The orginal
+                            is mutated and we
+                            will get the new array returned.
+                        </p>
+                    </div>
+                    <div class="info-img slice"></div>
+                </div>
+                <div class="info">
+                    <h3>Sort</h3>
+                    <div class="info-text">
+                        <p>
+                            How can we sort an array? We need a compare function. The default sort method will convert
+                            everything to strings and compare the UTF-16 code unit values. This creates unexpected
+                            results.
+                        </p>
+                    </div>
+                    <div class="info-img slice"></div>
+                </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Our Friends the Equality Operators</h2>
+                <p>
+                    If we compare an array with another array using the strictly equal operator we will get false. Why
+                    is this? Well this is because JavaScript is not comparing the values inside. What JavaScript cares
+                    about is the reference in memory. If we store a number we will use a certain amount of memory. But
+                    with arrays this is not the case. Array are stored differently. Arrays are stored using an address
+                    that points to the contents.
+                    <code>[1, 2, 3] === [1, 2, 3]<span>//false</span></code>.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Const and Arrays</h2>
+                <p>
+                    When we make an array and use const we can update the content of the array. As long as the reference
+                    remains we can change the contents without getting an error. We cannot reassign the reference.
+                </p>
+                <img src="" alt="AND OR operators in JavaScript">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Multidimenional Arrays</h2>
+                <p>
+                    Nested arrays are great for games like tic tac toe. We access the elements in exactly the same way.
+                    <code>gameBoard[1][1]</code>. We just chain square brackets to access the elements.
+                </p>
+                <img src="" alt="switch statement">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
