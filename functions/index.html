@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>JavaScript Land</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link active">Home</a></li>
+                <li><a href="/types/types.html" class="nav-link">Types</a></li>
+                <li><a href="/variables/variables.index.html" class="nav-link">Variables</a></li>
+                <li><a href="strings/strings.html" class="nav-link">Strings</a></li>
+                <li><a href="decisions.html" class="nav-link">Decisions</a></li>
+                <li><a href="arrays.html" class="nav-link">Arrays</a></li>
+                <li><a href="objects.html" class="nav-link">Objects</a></li>
+                <li><a href="loops.html" class="nav-link">Loops</a></li>
+                <li><a href="functions.html" class="nav-link">Functions</a></li>
+                <li><a href="array-methods.html" class="nav-link">Array Methods</a></li>
+                <li><a href="dom.html" class="nav-link">DOM</a></li>
+                <li><a href="async.html" class="nav-link">Async</a></li>
+                <li><a href="proptypes.html" class="nav-link">PropTypes</a></li>
+                <li><a href="classes.html" class="nav-link">Classes & OOP</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Functions</h1>
+                <h2 class="hero-subtitle">Functions are the building blocks of JavsScript!</h2>
+                <p>
+                    Functions are reusable, modular blocks of code. We can execute them at a later date in time and we
+                    use them all the time! Examples include making a function to roll a die. Instead of writing out 6
+                    variables we can create just one function and call it. We can extend the analogy to make a dice with
+                    an input that changes the sides of the die. This two step process is critical.
+                    You SHOULD define your functions before you call them.
+                </p>
+            </div>
+            <div class="hero-image"><img src="/assets/img/functional.png" alt="a computer with cogs"></div>
+        </section>
+        <section>
+            <h2>Functions</h2>
+            <p>
+                Creating a function is a two step process. First we define a function and then we run or invoke
+                it. This is how we declare a function: <code>function funcName(){//do something}</code>. Function names
+                are camel cased. The code inside the
+                curly braces will be run when the function is called. And this is how we invoke the function:
+                <code>functionName()</code>.
+            </p>
+            <img src="/assets/img/carbon.png" alt="function to log a song title">
+            <h3>Arguments</h3>lipl
+            <p>
+                Arguments are just a fancy way of saying inputs to our function. For example we can print a custom
+                message to the console based on the arguments we pass to the function. It refers to the value passed in.
+                When we used methods like <code>array.push(4)</code> this is technically an argument being passed in to
+                the push method. The parameters are a variable that represents the value passed in. If we are expected
+                an argument and nothing is passed in when the function is called we will get <code>undefined</code>
+                returned.
+            </p>
+            <img src="/assets/img/kailmera-function.png" alt="function using parameters">
+        </section>
+        <section>
+            <h2>Multiple arguments</h2>
+            <div>
+                <p>
+                    We can pass in multiple arguments to a function. The order matters, so in the example if we switched
+                    the order of the parameter the result would be reversed.
+                </p>
+                <img src="/assets/img/two-params.png" alt="a function with two parameters">
+            </div>
+            <h2>Return Key Word</h2>
+            <div class="">
+                <p>
+                    The return keyword! So far we have been console logging, but this is not a value that we can reuse.
+                    We need to be able to store values in a variable or use a method on it. We should return a value
+                    from our function using the return keyword <code>return</code>. Return will stop the execution of
+                    the function.
+                </p>
+            </div>
+            <img src="/assets/img/return.png" alt="return keyword">
+        </section>
+        <section>
+            <h2>Levelling up our functions</h2>
+            <h2>Scope</h2>
+            <p>
+                Scope is a challenging concept! So what exactly is scope? Scope refers to variable
+                <span></span>"visiability". The place where the variable is declared impacts how it can be accessed.
+            </p>
+        </section>
+        <section>
+            <h2>Function Scope</h2>
+            <p>
+                If a let variable is defined within a function, we cannot access it from the outer code. If we have a
+                conflict and a
+                variable with the same name exists outside the function, the function will ignore this outer variable.
+            </p>
+            <h2>Block Scope</h2>
+            <p>
+                Block refers to any code held in curly braces such as conditions or loops. <code>var </code> does not
+                respect the block scope. <code>let</code> and <code>const</code> variables decalred in block only exist
+                within that block!
+            </p>
+            <h2>Lexical Scope</h2>
+            <p>
+                Lexical Scope means that a function has access to the variables in the outer scope or parent function.
+                So in the example
+                below we can see that cryForHelp has access to the heroes variable.
+            </p>
+            <h2>Function Expressions</h2>
+            <p>
+                There is another way to create a function. That is a function expression. We store the function we have
+                created in a variable. When we can the function by using the variable name. We are essentially craeting
+                a function with no name but the variable has a name. Functions are values in JavaScript and we can pass
+                them around and return a function just like a return value!
+            </p>
+            <h2>High Order Functions</h2>
+            <p>
+                A high order function is a function that can be passed around as an argument. For example in callTwice
+                we are passing rollDie as an argument. We can also return a function as value from a function. The
+                pattern her is the important thing to learn. Sometimes you will also see a function that generates
+                another function based on some input! We can capture the return value in a variable. This pattern is
+                known as a factory function!
+            </p>
+        </section>
+        <section>
+            <div class="">
+                <h3>What is a Method?</h3>
+                <p>
+                    A method is a function that is a property on an object. If we inspect the Math object in the console
+                    we will see it made up of a bunch of properties.
+                </p>
+            </div>
+            <div class="
+            "></div>
+        </section>
+    </main>
+</body>
+
+</html>

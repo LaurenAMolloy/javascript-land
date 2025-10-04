@@ -317,7 +317,15 @@ body {
     padding-bottom: 1rem;
 }
 
-.types>h3 {
+.types-info>h3 {
+    padding-top: 1rem;
+}
+
+.types-info>h4 {
+    padding-top: 1rem;
+}
+
+.types-info>p {
     padding-top: 1rem;
 }
 
@@ -343,14 +351,10 @@ body {
     width: 40%;
 }
 
-.content-img img {
-    border: 2px solid #e040fb;
-    border-radius: 10px;
-}
 
 hr {
     background-color: #e040fb;
-    margin: 2rem auto;
+    margin: 1rem auto;
     width: 80%;
 
 }
@@ -406,6 +410,15 @@ hr {
 
     .nav {
         padding: 1rem;
+    }
+
+    .column {
+        flex-direction: column-reverse;
+    }
+
+    .content-text,
+    .content-img {
+        width: 100%;
     }
 }
 

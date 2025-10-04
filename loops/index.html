@@ -135,83 +135,81 @@
                     </div>
                     <div class="info-img"></div>
                 </div>
-                <div class="info">
-                    <div class="info-text">
-                        <p>
-                            Reverse is a destructive method and will return a reversed array
-                        </p>
-                    </div>
-                    <div class="info-img"></div>
-                </div>
         </section>
         <section>
             <div class="container">
                 <div class="info">
-                    <h3>Slice</h3>
+                    <h3>While Loop</h3>
                     <div class="info-text">
                         <p>
-                            Slice will return a portion of an array. We can pass in a starting point and then we can get
-                            a portion from the element at the starting index to the last index. If we pass in a second
-                            argument, an end, it will stop but not include that index.
+                            The <code>while</code> loop will run while a condition is true. Be warned it is super easy
+                            to make an infinite loop using this. For loops are the ptrefered methiod for a set number of
+                            items. A while loop is more useful for something that is variable. In the example code the
+                            condition will run until the user guesses the secret word.
                         </p>
                     </div>
                     <div class="info-img slice"></div>
                 </div>
                 <div class="info">
-                    <h3>Splice</h3>
+                    <h3>Break Keyword</h3>
                     <div class="info-text">
                         <p>
-                            When we use splice it is a descrutctive methods. We pass in three
-                            arguments<code>(start, amount of elements to delete, element to insert)</code>. The orginal
-                            is mutated and we
-                            will get the new array returned.
+                            The break keyword is used to escape a loop. In the example we can see that until the
+                            user enters stop copying me the code will continue to run!
                         </p>
                     </div>
                     <div class="info-img slice"></div>
                 </div>
-                <div class="info">
-                    <h3>Sort</h3>
-                    <div class="info-text">
-                        <p>
-                            How can we sort an array? We need a compare function. The default sort method will convert
-                            everything to strings and compare the UTF-16 code unit values. This creates unexpected
-                            results.
-                        </p>
-                    </div>
-                    <div class="info-img slice"></div>
-                </div>
+            </div>
         </section>
+
         <section>
             <div class="container">
-                <h2>Our Friends the Equality Operators</h2>
+                <h2>The Lovely for of Loop</h2>
                 <p>
-                    If we compare an array with another array using the strictly equal operator we will get false. Why
-                    is this? Well this is because JavaScript is not comparing the values inside. What JavaScript cares
-                    about is the reference in memory. If we store a number we will use a certain amount of memory. But
-                    with arrays this is not the case. Array are stored differently. Arrays are stored using an address
-                    that points to the contents.
-                    <code>[1, 2, 3] === [1, 2, 3]<span>//false</span></code>.
+                    The for of loop is a lot better for iterating over arrays. The basic syntax for the For...of looks
+                    like this...<code>for(variable of iterable){statement}</code> Let's compare the <code>for</code>
+                    loop
+                    with the <code>for of</code> loop! Although the for...of is a cleaner syntax if you need the index
+                    you should probably choose a for loop. There are other iterables you can use the for...of loop with
+                    like strings!
                 </p>
+                <img src="/assets/img/for-of-array.png" alt="for of loop syntax">
+                <img src="/assets/img/for-of-string.png" alt="for of loop with a string">
             </div>
         </section>
         <section>
             <div class="container">
-                <h2>Const and Arrays</h2>
+                <h2>Can we use for...of with Objects?</h2>
                 <p>
-                    When we make an array and use const we can update the content of the array. As long as the reference
-                    remains we can change the contents without getting an error. We cannot reassign the reference.
+                    No way! An object is not actually considered an iterable. The <code>for of </code> loop just will
+                    not cut it. The <code>for in</code> is used for iterating over an object and will jsut give us the
+                    key. It is not that common these days.
                 </p>
-                <img src="" alt="AND OR operators in JavaScript">
+                <img src="" alt="">
+                <p>
+                    There are other ways to get the values from an object such as using the built in methods such as
+                    <code>Object.entries(objectName)</code>. This returns an array of key value pairs. This is useful
+                    when we want to apply array methods such as map, filter or reduce to values of an object. We
+                    can use these in conjuction with the for in loop like so...
+                </p>
+                <img src="" alt="">
             </div>
         </section>
         <section>
             <div class="container">
-                <h2>Multidimenional Arrays</h2>
+                <h2>Todo List</h2>
                 <p>
-                    Nested arrays are great for games like tic tac toe. We access the elements in exactly the same way.
-                    <code>gameBoard[1][1]</code>. We just chain square brackets to access the elements.
+                    This is a commandline project!
+                    Everything is done via prompt. Here is a list of the features we will implement!
                 </p>
-                <img src="" alt="switch statement">
+                <ul>
+                    <li>"new" = Add A Todo</li>
+                    <li>"list" = List all Todos</li>
+                    <li>"delete" = Remove a specific todo </li>
+                    <li>"quit" = quit app</li>
+                </ul>
+                <img src="/assets/img/todo.png" alt="code for a todo app">
             </div>
         </section>
     </main>

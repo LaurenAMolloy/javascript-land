@@ -56,7 +56,7 @@
             <img class="logo" src="/assets/img/js.png" alt="JavaScript logo">
         </section>
         <section class="content">
-            <div class="container primitives">
+            <div class="container primitives column">
                 <div class="content-text">
                     <h2>Primitive Types</h2>
                     <p>
@@ -81,55 +81,77 @@
                 </div>
             </div>
         </section>
-        <hr>
         <section class="content">
-            <div class="container types-info">
-                <h2>Practice Time!</h2>
-                <p>
-                    Open dev tools! Let's write some JavaScript. the console is aka repl, Read Evaluate, Print and Loop.
-                    A
-                    good place to demo code and learn the basics.
-                </p>
-                <h3>Numbers</h3>
-                <p>
-                    JavaScript has one number type. Other languages you have two types usually integers and
-                    decimals(floats). Numbers have a hard limit in terms of space in memory. We can perform math
-                    operations
-                    using JavaScript such as...
-                </p>
-                <ul>
-                    <li><code>addition +</code></li>
-                    <li><code>subtraction -</code></li>
-                    <li><code>multiplication *</code></li>
-                    <li><code>division /</code></li>
-                    <li><code>module %</code></li>
-                </ul>
-                <p>JavaScript follows the PEMDAS order of operation. Parenthesis, Exponents, Multiplication, Division
-                    and
-                    Addition. Modulo is known as the remainder operator so for example <code>19 % 4</code> will give us
-                    3.</p>
-                <img class="console-code" src="/assets/img/math_operations.png">
-                <h4>Exponent</h4>
-                <p>
-                    This <code>2 ** 3</code> is basically 2 to the power of 3 or 2x2x2.
-                </p>
+            <div class="container types-info primitives">
+                <div class="content-img">
+                    <img class="console-code" src="/assets/img/math_operations.png">
+                </div>
+                <div class="content-text">
+                    <h2>Numbers</h2>
+                    <p>
+                        JavaScript has one number type. Other languages you have two types usually integers and
+                        decimals(floats). Numbers have a hard limit in terms of space in memory. We can perform math
+                        operations
+                        using JavaScript such as...
+                    </p>
+                    <ul>
+                        <li><code>addition +</code></li>
+                        <li><code>subtraction -</code></li>
+                        <li><code>multiplication *</code></li>
+                        <li><code>division /</code></li>
+                        <li><code>module %</code></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container types-info primitives">
+                <div class="content-text">
+                    <h2>PEDMAS & MODULO</h2>
+
+                    <p>
+                        JavaScript follows the PEMDAS order of operation. Parenthesis, Exponents, Multiplication,
+                        Division
+                        and
+                        Addition. Modulo is known as the remainder operator so for example <code>19 % 4</code> will give
+                        us
+                        3.
+                    </p>
+                </div>
+                <div class="content-img">
+                    <img class="modulo" src="/assets/img/modulo.png">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content-text">
                 <h4>NaN</h4>
                 <p>
                     NaN is a number, but represent a value that is not a number. So for example if you use
                     <code>typeOf NaN</code> this will return a number.
                 </p>
-                <h4>Null and undefined</h4>
-                <p>
-                    There are two primitive types which are very simple compared to strings. Both are single values like
-                    true or false. Undefined is returned when we try to access a value that is not there. For example
-                    <code>const userName</code>. Undefined is something we will run into very often! Whereas null is the
-                    intentional lack of a value. For example if a user
-                    ins not logged in, but we expect one at a later date we can do
-                    this...<code>let loggedInUser = null</code>
-                <div class=""></div>
-                </p>
             </div>
         </section>
+
+
+        </div>
+
+        <h4>NaN</h4>
+        <p>
+            NaN is a number, but represent a value that is not a number. So for example if you use
+            <code>typeOf NaN</code> this will return a number.
+        </p>
+        <h4>Null and undefined</h4>
+        <p>
+            There are two primitive types which are very simple compared to strings. Both are single values like
+            true or false. Undefined is returned when we try to access a value that is not there. For example
+            <code>const userName</code>. Undefined is something we will run into very often! Whereas null is the
+            intentional lack of a value. For example if a user
+            ins not logged in, but we expect one at a later date we can do
+            this...<code>let loggedInUser = null</code>
+        <div class=""></div>
+        </p>
         <section>
             <div class="container">
                 <h3>The Math Object</h3>
@@ -143,7 +165,7 @@
                     want a random number bewteeen 1 and 10. This is the approach we will
                     take..<code>Math.floor(Math.random() * 5) + 1</code>. We add 1 because Math.random starts at 0!
                 </p>
-                <img src="/assets/img/math_random.png">
+                <img src="/assets/img/math_random.png" alt="code to create a random number">
             </div>
         </section>
     </main>
