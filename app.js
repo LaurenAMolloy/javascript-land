@@ -1,5 +1,33 @@
 console.log("it works");
 
+//load nav
+async function loadNav(){
+try {
+    const response = await fetch("/nav.html");
+
+    if(!response.ok){
+        throw new Error(`${response.status}`)
+    }
+    const nav = await response.text();
+    //console.log(nav);
+
+} catch (error) {
+    
+}
+}
+
+loadNav();
+
+//load footer
+async function loadFooter(){
+    try {
+        
+    } catch (error) {
+        
+    }
+
+}
+
 //Conditionals
 
 // console.log("Before");
@@ -198,59 +226,59 @@ console.log("it works");
 
 //The for of loop!
 
-const disneyCharacters = [
-    "Mickey Mouse",
-    "Minnie Mouse",
-    "Donald Duck",
-    "Goofy",
-    "Pluto",
-    "Daisy Duck",
-    "Cinderella",
-    "Snow White",
-];
+// const disneyCharacters = [
+//     "Mickey Mouse",
+//     "Minnie Mouse",
+//     "Donald Duck",
+//     "Goofy",
+//     "Pluto",
+//     "Daisy Duck",
+//     "Cinderella",
+//     "Snow White",
+// ];
 
-//This is not as clean as the for of
-for(let i = 0; i < disneyCharacters.length; i++){
-    //console.log(disneyCharacters[i])
-}
+// //This is not as clean as the for of
+// for(let i = 0; i < disneyCharacters.length; i++){
+//     //console.log(disneyCharacters[i])
+// }
 
-//Look how lovely this is!
-for(let character of disneyCharacters){
-    //console.log(character);
-}
+// //Look how lovely this is!
+// for(let character of disneyCharacters){
+//     //console.log(character);
+// }
 
-const myName = "lauren";
+// const myName = "lauren";
 
-for(char of myName){
-    //console.log(char)
-}
+// for(char of myName){
+//     //console.log(char)
+// }
 
-const footballScores = {
-    "Barcelona": 2,
-    "Manchester United": 3,
-    "Bayern Munich": 4,
-    "Juventus": 5,
-}
+// const footballScores = {
+//     "Barcelona": 2,
+//     "Manchester United": 3,
+//     "Bayern Munich": 4,
+//     "Juventus": 5,
+// }
 
-for(let team in footballScores) {
-    //console.log(`${team} scored ${footballScores[team]}`)
-}
+// for(let team in footballScores) {
+//     //console.log(`${team} scored ${footballScores[team]}`)
+// }
 
-Object.keys(footballScores);
-Object.values(footballScores);
-Object.entries(footballScores);
+// Object.keys(footballScores);
+// Object.values(footballScores);
+// Object.entries(footballScores);
 
-let total = 0;
+// let total = 0;
 
-//this gives us an array of the values
-let scores = Object.values(footballScores)
+// //this gives us an array of the values
+// let scores = Object.values(footballScores)
 
-for(let score of Object.values(footballScores)) {
-    total += score;
-}
+// for(let score of Object.values(footballScores)) {
+//     total += score;
+// }
 
 //Get average
-const avg = total/scores.length;
+//const avg = total/scores.length;
 //console.log(avg);
 
 //todo
@@ -344,24 +372,24 @@ const avg = total/scores.length;
 
 // snakeEyes(randomNum1, randomNum2);
 
-function add(x, y) {
-    if(typeof x !== "number" || typeof y !== "number") {
-        return false;
-    }
-    return x + y
-}
+// function add(x, y) {
+//     if(typeof x !== "number" || typeof y !== "number") {
+//         return false;
+//     }
+//     return x + y
+// }
 
-//multiply
-function multiply(x, y) {
-    return x * y
-}
+// //multiply
+// function multiply(x, y) {
+//     return x * y
+// }
 
-//isShortsWeather 
-function isShorts(temp){
-    if(temp >= 75) {
-        return true;
-    } return false;
-}
+// //isShortsWeather 
+// function isShorts(temp){
+//     if(temp >= 75) {
+//         return true;
+//     } return false;
+// }
 
 //last element
 // function lastElem(arr) {
@@ -449,91 +477,324 @@ function isShorts(temp){
 
 //Lexical Scope
 //The question is does cry for help have access to heroes?
-function bankRobbery(){
+// function bankRobbery(){
 
-    const heroes = ['Spiderman', 'Wolverine', 'Black Panther' ]
-    function cryForHelp(){
-        for(let hero of heroes) {
-            console.log(`HELP US, ${heroes}.toUpperCase`);
-        }
-    }
-    cryForHelp();
-}
-
-
-
-function isEven(num) {
-	if(num % 2 === 0) {
-        console.log("even")
-    } else {
-    console.log("odd")
-    }  
-}
-
-isEven(8);
-
-//function expressions
-const square = function(num) {
-    return num * num;
-}
-
-console.log(square(4))
-//16
-
-//High Order Functions
-function callTwice(func){
-    func();
-    func();
-}
-
-function rollDie(){
-    const roll = Math.floor(Math.random() * 6) + 1
-    console.log(roll)
-}
-
-//Do not invoke roll die here!
-callTwice(rollDie);
-
-function makeMysteryFunc() {
-    const rand = Math.random();
-    if(rand > 0.5){
-        return function() {
-            alert("I am a good function!")
-        }
-    } else {
-        return function() {
-            alert("I am a bad function!")
-        }
-    }
-}
-
-const myMystery = makeMysteryFunc();
-
-//make between
-//factory function
-//This function will accept an argument
-function makeBewteenFunc(min, max) {
-    return function(num){
-        return num >=min && num <=max
-    }
-}
-
-const isChild = makeBewteenFunc(0, 18);
-const isAdult = makeBewteenFunc(19, 64);
-const isOap = makeBewteenFunc(65, 120);
-
-// function isBetween(num){
-//     return num >=50 && num <=100
-// }
-// function isBetween2(num){
-//     return num >=1 && num <=10
+//     const heroes = ['Spiderman', 'Wolverine', 'Black Panther' ]
+//     function cryForHelp(){
+//         for(let hero of heroes) {
+//             console.log(`HELP US, ${heroes}.toUpperCase`);
+//         }
+//     }
+//     cryForHelp();
 // }
 
-const myMath = {
-    square: function(num) {
-        return num * num
-    },
-    cube: function(num) {
-        return num * num * num
+
+
+// function isEven(num) {
+// 	if(num % 2 === 0) {
+//         console.log("even")
+//     } else {
+//     console.log("odd")
+//     }  
+// }
+
+// isEven(8);
+
+// //function expressions
+// const square = function(num) {
+//     return num * num;
+// }
+
+// console.log(square(4))
+// //16
+
+// //High Order Functions
+// function callTwice(func){
+//     func();
+//     func();
+// }
+
+// function rollDie(){
+//     const roll = Math.floor(Math.random() * 6) + 1
+//     console.log(roll)
+// }
+
+// //Do not invoke roll die here!
+// callTwice(rollDie);
+
+// function makeMysteryFunc() {
+//     const rand = Math.random();
+//     if(rand > 0.5){
+//         return function() {
+//             alert("I am a good function!")
+//         }
+//     } else {
+//         return function() {
+//             alert("I am a bad function!")
+//         }
+//     }
+// }
+
+// const myMystery = makeMysteryFunc();
+
+// //make between
+// //factory function
+// //This function will accept an argument
+// function makeBewteenFunc(min, max) {
+//     return function(num){
+//         return num >=min && num <=max
+//     }
+// }
+
+// const isChild = makeBewteenFunc(0, 18);
+// const isAdult = makeBewteenFunc(19, 64);
+// const isOap = makeBewteenFunc(65, 120);
+
+// // function isBetween(num){
+// //     return num >=50 && num <=100
+// // }
+// // function isBetween2(num){
+// //     return num >=1 && num <=10
+// // }
+
+// const myMath = {
+//     square: function(num) {
+//         return num * num
+//     },
+//     cube: function(num) {
+//         return num * num * num
+//     }
+// }
+
+// const squareObject = {
+//     area(side){
+//         return side * side;
+//     },
+//     perimeter(side){
+//         return side * 4;
+//     }
+// }
+
+// const cat = {
+//     name: "mooshee",
+//     color: "apricot",
+//     breed: "persian",
+//     meow(){
+//         console.log(this)
+//         console.log(`I am ${this.name} and I am a ${this.breed}`)
+//     }
+// }
+
+// //This in the context below refers to the window
+// const meow2 = cat.meow;
+
+// const hen = {
+//     name: "helen",
+//     eggCount: 0,
+//     layEgg(){
+//         this.eggCount ++;
+//         return `EGG`
+//     }
+// }
+
+// //Try this 
+// try {
+//     hello.toUppercase() 
+// //if there is an error do this...
+// } catch {
+//     console.log("Error")
+// }
+// console.log("After error!")
+
+
+// function yel(msg){
+// try {
+    
+//         console.log(msg.toUppercase())
+//     } catch (e) {
+//     console.log(e);
+//     console.log("Please pass a string");
+// }
+// }
+
+// yel(12345);
+
+//forEach
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+
+numbers.forEach(function(el){
+    if(el  % 2 === 0) {
+        console.log(el)
     }
+});
+
+const movies = [
+    { title: "Inception", score: 9 },
+    { title: "The Dark Knight", score: 9 },
+    { title: "Interstellar", score: 8 },
+    { title: "Parasite", score: 8 },
+    { title: "The Matrix", score: 8 }
+  ];
+
+movies.forEach((el) => {
+    console.log(`${el.title} - ${el.score}/100`)
+})
+
+const titles = movies.map((el) => {
+    return el.title.toUpperCase();
+});
+
+//titles is a new array!
+console.log(titles);
+
+const fullNames = [
+    {first: 'Albus', last: 'Dumbledore'}, 
+    {first: 'Harry', last: 'Potter'}, 
+    {first: 'Hermione', last: 'Granger'}, 
+    {first: 'Ron', last: 'Weasley'}, 
+    {first: 'Rubeus', last: 'Hagrid'}, 
+    {first: 'Minerva', last: 'McGonagall'}, {first: 'Severus', last: 'Snape'}
+];
+
+const firstNames = fullNames.map((el)=> {
+    return el.first
+});
+
+const lastNames = fullNames.map((el)=> {
+    return el.last
+});
+
+console.log(firstNames, lastNames);
+
+//arrow
+// const square = function(num){
+//     return num * num
+// }
+
+const square = (num) => {
+    return num * num
 }
+
+//Explicit Return
+const greet = (firstName) => {
+    return `Hey ${firstName}`
+};
+console.log(greet("Lauren"));
+
+//Implict return
+const greet2 = firstName =>`Hey ${firstName}`;
+console.log(greet2("Pete"));
+
+//regular
+const isEven1 = function(num){
+    return num % 2 === 0;
+}
+
+//arrow with parens
+const isEven2 = (num) => {
+    return num % 2 === 0;
+}
+
+//arrow with parens with return
+const isEven3 = num => {
+    return num % 2 === 0;
+}
+
+//implicit return
+const isEven4 = num => (
+     num % 2 === 0
+);
+
+//implicit return one liner
+const isEven = num => num % 2 === 0;
+
+const newMovies = movies.map((movie) => (
+    `${movie.title} - ${movie.score / 10}`
+));
+
+//setTimeout
+setTimeout(() =>{
+    console.log("Hello")
+}, 3000);
+
+//setInterval
+// const id = setInterval(() => {
+//    console.log(Math.random()) 
+// }, 2000);
+
+//clearInterval(2)
+
+//Filter
+const four = numbers.filter(n => {
+    return n === 4
+});
+
+const lessThan5 = numbers.filter(n => {
+    return n < 5
+})
+
+const movies2 = [
+    { title: "Inception", year: 2010, rating: 8 },
+    { title: "The Room", year: 2003, rating: 3 },
+    { title: "Interstellar", year: 2014, rating: 8 },
+    { title: "Cats", year: 2019, rating: 2 },
+    { title: "The Dark Knight", year: 2008, rating: 9 },
+    { title: "Movie 43", year: 2013, rating: 4 },
+    { title: "Parasite", year: 2019, rating: 8 },
+    { title: "Batman & Robin", year: 1997, rating: 3 }
+  ];
+
+ const oldMovies = movies2.filter((movie) => {
+    return movie.year < 2010
+ });
+
+ const goodMovies = movies2.filter(m => m.rating > 6)
+
+ const usernames = [
+    "Sam",
+    "LunaMoon",
+    "AlexTheGreat123",
+    "Jade",
+    "CodeWizard999",
+    "Mia",
+    "TechTitan42",
+    "Zoe",
+    "SuperCoderMike",
+    "EvaSunshine"
+  ];
+
+ function validUserNames(userNames) {
+    return userNames.filter(userName => userName.length < 10)
+ }
+
+ validUserNames(usernames);
+
+//some and every
+const exams = [10, 26, 78, 90, 31, 23, 67, 32, 34, 82]
+
+//This will log false 
+console.log(exams.every(score => score <= 50));
+//This will log true
+console.log(exams.some(score => score <= 50));
+
+function allEvens(arr) {
+    return (arr.every(el => el % 2 === 0)) 
+}
+
+//Reducer!
+const numsToSum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const summed = numsToSum.reduce((acc, currVal) => {
+    return acc + currVal
+}, 0)
+
+//first iteration acc = 0 val = 1
+
+//Find the min value
+const minNum = numsToSum.reduce((min, currVal) => {
+    if(min < currVal){
+        return min
+    } else {
+        return currVal
+    }
+});

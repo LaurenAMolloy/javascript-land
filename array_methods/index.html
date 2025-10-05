@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Land - Learn JavaScript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-placeholder"></div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="">
+                <h1 class="">Array Methods</h1>
+                <p class="">
+                    Array methods allow us to manipulate an array using array methods that require us to pass functions.
+                </p>
+            </div>
+            <div class="">
+            </div>
+        </section>
+        <section>
+            <h2>Array Methods</h2>
+            <div class="">
+                <p>Here are some commom array methods that we will use...</p><br>
+                <ul>
+                    <li>forEach</li>
+                    <li>map</li>
+                    <li>filter</li>
+                    <li>find</li>
+                    <li>reduce</li>
+                    <li>some</li>
+                    <li>every</li>
+                </ul>
+            </div>
+            <div class="image">
+            </div>
+        </section>
+        <section>
+            <h2>forEach</h2>
+            <div class="content">
+                <p>
+                    What ever array is passed in to the forEach will have the function applied to each element. For the
+                    most part this function will only exist within the forEach and will not be something we call again.
+                    We define the function and say "Hey forEach this is the function we would like you to call!"
+                </p>
+            </div>
+            <div class="image">
+            </div>
+        </section>
+        <section>
+            <h2>Map</h2>
+            <div class="">
+                <p>
+                    Map is very different, we can take an array and call the map method and then the return value from
+                    the function is stored in a NEW array that is constrcuted based on the original. This new array can
+                    then be stored in a variable.
+                </p>
+
+            </div>
+            <div class="image">
+            </div>
+        </section>
+        <section>
+            <h2>Arrow Functions</h2>
+            <div class="">
+                <p>
+                    Arrow functions are a newer compact version of writing a function expressions (a function stored in
+                    a variable). We donot require the function keyword and are super useful when we are using array
+                    methods and callback functions.
+                </p>
+                <ul>
+                    <li>Remove the function keyword</li>
+                    <li>Add an arrow to the right of the parameters!</li>
+                    <li>If there are no arg leave empty parens<code>()</code></li>
+                    <li>If there is only 1 argument then we can elimate the parens completely</li>
+                    <li>If there is 0 or 2 parameters then parens must be included!</li>
+                    <li>Implicit return can be used by skipping <code>{}</code> for shorter one line functions</li>
+                    <li>We can also replace the <code>{}</code> with <code>()</code> for implicit returns for multiline
+                        functions</li>
+                </ul>
+                <p>Important! implicit returns only work when we have a single value to return.</p>
+            </div>
+            <div class="image">
+                <img src="/assets/img/arrow.jpeg">
+            </div>
+        </section>
+        <section>
+            <h2>setTimeout & setInterval</h2>
+            <div class="">
+                <p>
+                    Settimeout allows us to execute a function at a later date! You pass two things, a classback and a
+                    delay
+                    is milliseconds. Another function that is similar to setTimeout is <code>setInterval</code>, this
+                    will
+                    continuously excute a function passed in at a specific interval. We can stop setTimeout using
+                    <code>clearInterval</code>. This uses an id coresponding to the interval we wish to stop!
+                </p>
+            </div>
+            <div class="image">
+                <img src="/assets/img/clearInterval.jpeg">
+            </div>
+            <section>
+                <h2>Filter</h2>
+                <div class="">
+                    <p>
+                        We can use <code>.filter()</code> to create a new array with all elements that pass a test
+                        implemented by the provided function. It needs to be a boolean. Any element that returns true
+                        will be added to the new array! We are never changing the original array. We can also chain
+                        methods such as <code>map()</code> to get specific results such as movie titls of high rated
+                        movie like so...<code>movies.filter(m => m.score > 80).map(m => m.title);</code>
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="/assets/img/filter.jpeg">
+                </div>
+            </section>
+            <section>
+                <h2>Some and Every</h2>
+                <div class="">
+                    <p>
+                        We can use <code>some</code> to return true if ANY elements passes a test and <code>every</code>
+                        if EVERY element passes!
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="">
+                </div>
+            </section>
+            <section>
+                <h2>The Dreaded Reducer</h2>
+                <div class="">
+                    <p>
+                        The main goal of reduce is to take an array an reduce the elements to a single value. We need to
+                        be the ones to decide how to do this! Lets walk through this..
+                    </p>
+                    <ul>
+                        <li>We provide a reducer function</li>
+                        <li>The first parameter represents the accumulator</li>
+                        <li>The second paremeter represents the current value</li>
+                        <li>We return the value that we be used as the current accumulator on the next iteration</li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="">
+                </div>
+            </section>
+    </main>
+    <div class="footer-placeholder"></div>
+</body>
+
+</html>

@@ -144,7 +144,25 @@
                 <h3>What is a Method?</h3>
                 <p>
                     A method is a function that is a property on an object. If we inspect the Math object in the console
-                    we will see it made up of a bunch of properties.
+                    we will see it made up of a bunch of properties. There is a shorthand properties and we can remove
+                    the function keyword.
+                </p>
+            </div>
+            <div class="
+            "></div>
+        </section>
+        <section>
+            <div class="">
+                <h3>Is This Scary?</h3>
+                <p>
+                    This is a source of confusion for many! It does not need to stressful. This is typically used inside
+                    a method. Let's refer to the code example to help us break down this concept! If we are in a method,
+                    then <code>this</code> refers to the object the method belongs to. In the example <code>this</code>
+                    refers to the cat object. BUUUUT...this is not always the case! The value can change and depends how
+                    we invoke the function. When we invoke the same method as meow2() what happens? We can undefined and
+                    this refers to the window object. Why? Every object that we use live inside the window. By defining
+                    something out in the open, it is added to the window. NOT the cat object! Whatever is left of the
+                    dot is what this is. Even though we cannot see window to the left of meow2 it is the default value.
                 </p>
             </div>
             <div class="
