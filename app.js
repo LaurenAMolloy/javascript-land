@@ -798,3 +798,75 @@ const minNum = numsToSum.reduce((min, currVal) => {
         return currVal
     }
 });
+
+const even = [2, 4, 6, 8]
+even.reduce((sum, num) => sum + num, 0);
+
+//count even numbers
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const countEven = nums.reduce((acc, currVal) => {
+    if(currVal % 2 === 0){
+        acc++
+    }
+    return acc;
+}, 0);
+
+//Count Ocurrences
+const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+
+const tallyFruit = fruits.reduce((acc, currVal) => {
+    //apple: 3 banana:2 orange: 1
+    if(!acc[currVal]) {
+        acc[currVal] = 1;
+    } else {
+        acc[currVal] ++
+    }
+    return acc;
+}, {});
+
+const people = [
+    { name: 'Alice', age: 25 },
+    { name: 'Bob', age: 25 },
+    { name: 'Charlie', age: 30 }
+  ]
+
+const ageKey = people.reduce((acc, currVal) => {
+    if(!acc[currVal.age]){
+        acc[currVal.age] = []
+    } else {
+        acc[currVal.age].push(currVal)
+    }
+
+    console.log("Current person:", currVal.name);
+    console.log("Accumulator so far:", acc);
+    console.log("------------");
+  
+    return acc;
+}, {});
+
+//Key word this refers to the person object
+const person = {
+    firstName: "Alexandra",
+    lastName: "Molloy",
+    fullName() {
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+//Key word this refers to the window object!!!
+//Arrow functions behave differently
+const person2 = {
+    firstName: "Alexandra",
+    lastName: "Molloy",
+    fullName: () => {
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+
+function rollDie(numsides = 6){
+    return Math.floor(Math.random() * numsides) + 1;
+}
+
+
+
+
