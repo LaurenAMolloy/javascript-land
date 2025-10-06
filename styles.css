@@ -376,6 +376,12 @@ hr {
     background-color: #ffff00;
 }
 
+/* DOM */
+.done {
+    text-decoration: line-through;
+
+}
+
 /* Footer */
 .footer {
     background-color: var(--dark);

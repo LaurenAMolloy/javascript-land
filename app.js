@@ -10,9 +10,10 @@ try {
     }
     const nav = await response.text();
     //console.log(nav);
+    document.querySelector(".nav-placeholder").innerHTML = nav
 
 } catch (error) {
-    
+  console.log(error)  
 }
 }
 
@@ -620,327 +621,348 @@ async function loadFooter(){
 // yel(12345);
 
 //forEach
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 
-numbers.forEach(function(el){
-    if(el  % 2 === 0) {
-        console.log(el)
-    }
-});
+// numbers.forEach(function(el){
+//     if(el  % 2 === 0) {
+//         console.log(el)
+//     }
+// });
 
-const movies = [
-    { title: "Inception", score: 9 },
-    { title: "The Dark Knight", score: 9 },
-    { title: "Interstellar", score: 8 },
-    { title: "Parasite", score: 8 },
-    { title: "The Matrix", score: 8 }
-  ];
+// const movies = [
+//     { title: "Inception", score: 9 },
+//     { title: "The Dark Knight", score: 9 },
+//     { title: "Interstellar", score: 8 },
+//     { title: "Parasite", score: 8 },
+//     { title: "The Matrix", score: 8 }
+//   ];
 
-movies.forEach((el) => {
-    console.log(`${el.title} - ${el.score}/100`)
-})
+// movies.forEach((el) => {
+//     console.log(`${el.title} - ${el.score}/100`)
+// })
 
-const titles = movies.map((el) => {
-    return el.title.toUpperCase();
-});
+// const titles = movies.map((el) => {
+//     return el.title.toUpperCase();
+// });
 
-//titles is a new array!
-console.log(titles);
+// //titles is a new array!
+// console.log(titles);
 
-const fullNames = [
-    {first: 'Albus', last: 'Dumbledore'}, 
-    {first: 'Harry', last: 'Potter'}, 
-    {first: 'Hermione', last: 'Granger'}, 
-    {first: 'Ron', last: 'Weasley'}, 
-    {first: 'Rubeus', last: 'Hagrid'}, 
-    {first: 'Minerva', last: 'McGonagall'}, {first: 'Severus', last: 'Snape'}
-];
+// const fullNames = [
+//     {first: 'Albus', last: 'Dumbledore'}, 
+//     {first: 'Harry', last: 'Potter'}, 
+//     {first: 'Hermione', last: 'Granger'}, 
+//     {first: 'Ron', last: 'Weasley'}, 
+//     {first: 'Rubeus', last: 'Hagrid'}, 
+//     {first: 'Minerva', last: 'McGonagall'}, {first: 'Severus', last: 'Snape'}
+// ];
 
-const firstNames = fullNames.map((el)=> {
-    return el.first
-});
+// const firstNames = fullNames.map((el)=> {
+//     return el.first
+// });
 
-const lastNames = fullNames.map((el)=> {
-    return el.last
-});
+// const lastNames = fullNames.map((el)=> {
+//     return el.last
+// });
 
-console.log(firstNames, lastNames);
+// console.log(firstNames, lastNames);
 
-//arrow
-// const square = function(num){
+// //arrow
+// // const square = function(num){
+// //     return num * num
+// // }
+
+// const square = (num) => {
 //     return num * num
 // }
 
-const square = (num) => {
-    return num * num
-}
+// //Explicit Return
+// const greet = (firstName) => {
+//     return `Hey ${firstName}`
+// };
+// console.log(greet("Lauren"));
 
-//Explicit Return
-const greet = (firstName) => {
-    return `Hey ${firstName}`
-};
-console.log(greet("Lauren"));
+// //Implict return
+// const greet2 = firstName =>`Hey ${firstName}`;
+// console.log(greet2("Pete"));
 
-//Implict return
-const greet2 = firstName =>`Hey ${firstName}`;
-console.log(greet2("Pete"));
-
-//regular
-const isEven1 = function(num){
-    return num % 2 === 0;
-}
-
-//arrow with parens
-const isEven2 = (num) => {
-    return num % 2 === 0;
-}
-
-//arrow with parens with return
-const isEven3 = num => {
-    return num % 2 === 0;
-}
-
-//implicit return
-const isEven4 = num => (
-     num % 2 === 0
-);
-
-//implicit return one liner
-const isEven = num => num % 2 === 0;
-
-const newMovies = movies.map((movie) => (
-    `${movie.title} - ${movie.score / 10}`
-));
-
-//setTimeout
-setTimeout(() =>{
-    console.log("Hello")
-}, 3000);
-
-//setInterval
-// const id = setInterval(() => {
-//    console.log(Math.random()) 
-// }, 2000);
-
-//clearInterval(2)
-
-//Filter
-const four = numbers.filter(n => {
-    return n === 4
-});
-
-const lessThan5 = numbers.filter(n => {
-    return n < 5
-})
-
-const movies2 = [
-    { title: "Inception", year: 2010, rating: 8 },
-    { title: "The Room", year: 2003, rating: 3 },
-    { title: "Interstellar", year: 2014, rating: 8 },
-    { title: "Cats", year: 2019, rating: 2 },
-    { title: "The Dark Knight", year: 2008, rating: 9 },
-    { title: "Movie 43", year: 2013, rating: 4 },
-    { title: "Parasite", year: 2019, rating: 8 },
-    { title: "Batman & Robin", year: 1997, rating: 3 }
-  ];
-
- const oldMovies = movies2.filter((movie) => {
-    return movie.year < 2010
- });
-
- const goodMovies = movies2.filter(m => m.rating > 6)
-
- const usernames = [
-    "Sam",
-    "LunaMoon",
-    "AlexTheGreat123",
-    "Jade",
-    "CodeWizard999",
-    "Mia",
-    "TechTitan42",
-    "Zoe",
-    "SuperCoderMike",
-    "EvaSunshine"
-  ];
-
- function validUserNames(userNames) {
-    return userNames.filter(userName => userName.length < 10)
- }
-
- validUserNames(usernames);
-
-//some and every
-const exams = [10, 26, 78, 90, 31, 23, 67, 32, 34, 82]
-
-//This will log false 
-console.log(exams.every(score => score <= 50));
-//This will log true
-console.log(exams.some(score => score <= 50));
-
-function allEvens(arr) {
-    return (arr.every(el => el % 2 === 0)) 
-}
-
-//Reducer!
-const numsToSum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-const summed = numsToSum.reduce((acc, currVal) => {
-    return acc + currVal
-}, 0)
-
-//first iteration acc = 0 val = 1
-
-//Find the min value
-const minNum = numsToSum.reduce((min, currVal) => {
-    if(min < currVal){
-        return min
-    } else {
-        return currVal
-    }
-});
-
-const even = [2, 4, 6, 8]
-even.reduce((sum, num) => sum + num, 0);
-
-//count even numbers
-const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-const countEven = nums.reduce((acc, currVal) => {
-    if(currVal % 2 === 0){
-        acc++
-    }
-    return acc;
-}, 0);
-
-//Count Ocurrences
-const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
-
-const tallyFruit = fruits.reduce((acc, currVal) => {
-    //apple: 3 banana:2 orange: 1
-    if(!acc[currVal]) {
-        acc[currVal] = 1;
-    } else {
-        acc[currVal] ++
-    }
-    return acc;
-}, {});
-
-const people = [
-    { name: 'Alice', age: 25 },
-    { name: 'Bob', age: 25 },
-    { name: 'Charlie', age: 30 }
-  ]
-
-const ageKey = people.reduce((acc, currVal) => {
-    if(!acc[currVal.age]){
-        acc[currVal.age] = []
-    } else {
-        acc[currVal.age].push(currVal)
-    }
-
-    console.log("Current person:", currVal.name);
-    console.log("Accumulator so far:", acc);
-    console.log("------------");
-  
-    return acc;
-}, {});
-
-//Key word this refers to the person object
-const person = {
-    firstName: "Alexandra",
-    lastName: "Molloy",
-    fullName() {
-        return `${this.firstName} ${this.lastName}`
-    }
-}
-//Key word this refers to the window object!!!
-//Arrow functions behave differently
-const person2 = {
-    firstName: "Alexandra",
-    lastName: "Molloy",
-    fullName: () => {
-        return `${this.firstName} ${this.lastName}`
-    }
-}
-
-function rollDie(numsides = 6){
-    return Math.floor(Math.random() * numsides) + 1;
-}
-
-//Spread 
-const cats = ["teddy", "mooshee"];
-const dogs = ["ben", "benji"];
-
-const allPets = [...cats, ...dogs];
-console.log(allPets);
-
-const feline = {
-    legs: 4,
-    color: "black",
-    family: "felidae",
-    isFurry: true,
-}
-
-const feline2 = {
-    ...feline, 
-    eyeColor:"green"
-}
-
-//Rest
-//Will take our args and put them in an array :)
-function sum(...nums){
-    console.log(nums)
-}
-
-sum(2, 4, 6);
-//[2, 4, 6]
-
-//Destructuring
-//Arrays
-const scores = [50, 40, 30, 20, 10];
-const [gold, silver, bronze, ...everyOneElse] = scores;
-
-//Objects
-const user = {
-    id: 1,
-    name: "Jane Doe",
-    email: "jane.doe@example.com",
-    isActive: true,
-    roles: ["user", "admin"],
-    createdAt: new Date(),
-    
-    // Example method
-    greet() {
-      console.log(`Hello, my name is ${this.name}!`);
-    }
-  };
-
-  //Props to destructure
-  //Order does not matter
-  //default values added
-  const { id, name, email, died = "false" } = user;
-
-  function fullName ({ firstName, lastName}) {
-    console.log(`${firstName} ${lastName}`)
-  }
-
-//The DOM
-const selectImage = document.getElementById('codeImg');
-const imgElements = document.getElementsByTagName('img');
-
-// for(let img of imgElements){
-//     console.log(img.src)
+// //regular
+// const isEven1 = function(num){
+//     return num % 2 === 0;
 // }
 
-const images = document.getElementsByClassName("image");
-console.log(images);
+// //arrow with parens
+// const isEven2 = (num) => {
+//     return num % 2 === 0;
+// }
 
-//Select all elements with done class
-const doneTodos = document.querySelectorAll(".done");
+// //arrow with parens with return
+// const isEven3 = num => {
+//     return num % 2 === 0;
+// }
 
-//select checkbox
-const checkBox = document.querySelector('input[type="checkbox"]');
-console.log(checkBox);
+// //implicit return
+// const isEven4 = num => (
+//      num % 2 === 0
+// );
+
+// //implicit return one liner
+// const isEven = num => num % 2 === 0;
+
+// const newMovies = movies.map((movie) => (
+//     `${movie.title} - ${movie.score / 10}`
+// ));
+
+// //setTimeout
+// setTimeout(() =>{
+//     console.log("Hello")
+// }, 3000);
+
+// //setInterval
+// // const id = setInterval(() => {
+// //    console.log(Math.random()) 
+// // }, 2000);
+
+// //clearInterval(2)
+
+// //Filter
+// const four = numbers.filter(n => {
+//     return n === 4
+// });
+
+// const lessThan5 = numbers.filter(n => {
+//     return n < 5
+// })
+
+// const movies2 = [
+//     { title: "Inception", year: 2010, rating: 8 },
+//     { title: "The Room", year: 2003, rating: 3 },
+//     { title: "Interstellar", year: 2014, rating: 8 },
+//     { title: "Cats", year: 2019, rating: 2 },
+//     { title: "The Dark Knight", year: 2008, rating: 9 },
+//     { title: "Movie 43", year: 2013, rating: 4 },
+//     { title: "Parasite", year: 2019, rating: 8 },
+//     { title: "Batman & Robin", year: 1997, rating: 3 }
+//   ];
+
+//  const oldMovies = movies2.filter((movie) => {
+//     return movie.year < 2010
+//  });
+
+//  const goodMovies = movies2.filter(m => m.rating > 6)
+
+//  const usernames = [
+//     "Sam",
+//     "LunaMoon",
+//     "AlexTheGreat123",
+//     "Jade",
+//     "CodeWizard999",
+//     "Mia",
+//     "TechTitan42",
+//     "Zoe",
+//     "SuperCoderMike",
+//     "EvaSunshine"
+//   ];
+
+//  function validUserNames(userNames) {
+//     return userNames.filter(userName => userName.length < 10)
+//  }
+
+//  validUserNames(usernames);
+
+// //some and every
+// const exams = [10, 26, 78, 90, 31, 23, 67, 32, 34, 82]
+
+// //This will log false 
+// console.log(exams.every(score => score <= 50));
+// //This will log true
+// console.log(exams.some(score => score <= 50));
+
+// function allEvens(arr) {
+//     return (arr.every(el => el % 2 === 0)) 
+// }
+
+// //Reducer!
+// const numsToSum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// const summed = numsToSum.reduce((acc, currVal) => {
+//     return acc + currVal
+// }, 0)
+
+// //first iteration acc = 0 val = 1
+
+// //Find the min value
+// const minNum = numsToSum.reduce((min, currVal) => {
+//     if(min < currVal){
+//         return min
+//     } else {
+//         return currVal
+//     }
+// });
+
+// const even = [2, 4, 6, 8]
+// even.reduce((sum, num) => sum + num, 0);
+
+// //count even numbers
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const countEven = nums.reduce((acc, currVal) => {
+//     if(currVal % 2 === 0){
+//         acc++
+//     }
+//     return acc;
+// }, 0);
+
+// //Count Ocurrences
+// const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+
+// const tallyFruit = fruits.reduce((acc, currVal) => {
+//     //apple: 3 banana:2 orange: 1
+//     if(!acc[currVal]) {
+//         acc[currVal] = 1;
+//     } else {
+//         acc[currVal] ++
+//     }
+//     return acc;
+// }, {});
+
+// const people = [
+//     { name: 'Alice', age: 25 },
+//     { name: 'Bob', age: 25 },
+//     { name: 'Charlie', age: 30 }
+//   ]
+
+// const ageKey = people.reduce((acc, currVal) => {
+//     if(!acc[currVal.age]){
+//         acc[currVal.age] = []
+//     } else {
+//         acc[currVal.age].push(currVal)
+//     }
+
+//     console.log("Current person:", currVal.name);
+//     console.log("Accumulator so far:", acc);
+//     console.log("------------");
+  
+//     return acc;
+// }, {});
+
+// //Key word this refers to the person object
+// const person = {
+//     firstName: "Alexandra",
+//     lastName: "Molloy",
+//     fullName() {
+//         return `${this.firstName} ${this.lastName}`
+//     }
+// }
+// //Key word this refers to the window object!!!
+// //Arrow functions behave differently
+// const person2 = {
+//     firstName: "Alexandra",
+//     lastName: "Molloy",
+//     fullName: () => {
+//         return `${this.firstName} ${this.lastName}`
+//     }
+// }
+
+// function rollDie(numsides = 6){
+//     return Math.floor(Math.random() * numsides) + 1;
+// }
+
+// //Spread 
+// const cats = ["teddy", "mooshee"];
+// const dogs = ["ben", "benji"];
+
+// const allPets = [...cats, ...dogs];
+// console.log(allPets);
+
+// const feline = {
+//     legs: 4,
+//     color: "black",
+//     family: "felidae",
+//     isFurry: true,
+// }
+
+// const feline2 = {
+//     ...feline, 
+//     eyeColor:"green"
+// }
+
+// //Rest
+// //Will take our args and put them in an array :)
+// function sum(...nums){
+//     console.log(nums)
+// }
+
+// sum(2, 4, 6);
+// //[2, 4, 6]
+
+// //Destructuring
+// //Arrays
+// const scores = [50, 40, 30, 20, 10];
+// const [gold, silver, bronze, ...everyOneElse] = scores;
+
+// //Objects
+// const user = {
+//     id: 1,
+//     name: "Jane Doe",
+//     email: "jane.doe@example.com",
+//     isActive: true,
+//     roles: ["user", "admin"],
+//     createdAt: new Date(),
+    
+//     // Example method
+//     greet() {
+//       console.log(`Hello, my name is ${this.name}!`);
+//     }
+//   };
+
+//   //Props to destructure
+//   //Order does not matter
+//   //default values added
+//   const { id, name, email, died = "false" } = user;
+
+//   function fullName ({ firstName, lastName}) {
+//     console.log(`${firstName} ${lastName}`)
+//   }
+
+// //The DOM
+// const selectImage = document.getElementById('codeImg');
+// const imgElements = document.getElementsByTagName('img');
+
+// // for(let img of imgElements){
+// //     console.log(img.src)
+// // }
+
+// const images = document.getElementsByClassName("image");
+// console.log(images);
+
+// //Select all elements with done class
+// const doneTodos = document.querySelectorAll(".done");
+
+// //select checkbox
+// const checkBox = document.querySelector('input[type="checkbox"]');
+// console.log(checkBox);
 
 
 
+
+
+//Reduce structure
+// let value = arr.reduce(function(accumulator, item, index, array) {
+
+// }, [initial]);
+
+//Get Average age
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
+
+const arr = [john, pete, mary]
+
+const avg = arr.reduce((acc, person ) => {
+    return acc + person.age
+}, 0) /arr.length
+
+//acc 0 acc + person.age 25
+//acc 25 acc + person.age 55
+//acc 55 acc + person.age 84

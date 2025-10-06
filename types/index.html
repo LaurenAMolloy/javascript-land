@@ -7,36 +7,12 @@
     <title>Types</title>
     <link rel="stylesheet" href="/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <script src="/app.js" defer></script>
 </head>
 
 <body>
     <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <h1>JavaScript Land</h1>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="/index.html" class="nav-link active">Home</a></li>
-                <li><a href="/types/types.html" class="nav-link">Types</a></li>
-                <li><a href="/variables/variables.index.html" class="nav-link">Variables</a></li>
-                <li><a href="strings/strings.html" class="nav-link">Strings</a></li>
-                <li><a href="decisions.html" class="nav-link">Decisions</a></li>
-                <li><a href="arrays.html" class="nav-link">Arrays</a></li>
-                <li><a href="objects.html" class="nav-link">Objects</a></li>
-                <li><a href="loops.html" class="nav-link">Loops</a></li>
-                <li><a href="functions.html" class="nav-link">Functions</a></li>
-                <li><a href="array-methods.html" class="nav-link">Array Methods</a></li>
-                <li><a href="dom.html" class="nav-link">DOM</a></li>
-                <li><a href="async.html" class="nav-link">Async</a></li>
-                <li><a href="proptypes.html" class="nav-link">PropTypes</a></li>
-                <li><a href="classes.html" class="nav-link">Classes & OOP</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+        <div class="nav-placeholder"></div>
     </header>
 
     <main class="main">
@@ -125,55 +101,56 @@
             </div>
         </section>
         <section>
-            <div class="content-text">
-                <h4>NaN</h4>
-                <p>
-                    NaN is a number, but represent a value that is not a number. So for example if you use
-                    <code>typeOf NaN</code> this will return a number.
-                </p>
+            <div class="container types-info primitives">
+                <div class="content-text">
+                    <h4>NaN</h4>
+                    <p>
+                        NaN is a number, but represent a value that is not a number. So for example if you use
+                        <code>typeOf NaN</code> this will return a number.
+                    </p>
+                </div>
+                <div class="content-text">
+                    <h4>Null and undefined</h4>
+                    <p>
+                        There are two primitive types which are very simple compared to strings. Both are single values
+                        like
+                        true or false. Undefined is returned when we try to access a value that is not there. For
+                        example
+                        <code>const userName</code>. Undefined is something we will run into very often! Whereas null is
+                        the
+                        intentional lack of a value. For example if a user
+                        ins not logged in, but we expect one at a later date we can do
+                        this...<code>let loggedInUser = null</code>
+                </div>
             </div>
         </section>
 
-
-        </div>
-
-        <h4>NaN</h4>
-        <p>
-            NaN is a number, but represent a value that is not a number. So for example if you use
-            <code>typeOf NaN</code> this will return a number.
-        </p>
-        <h4>Null and undefined</h4>
-        <p>
-            There are two primitive types which are very simple compared to strings. Both are single values like
-            true or false. Undefined is returned when we try to access a value that is not there. For example
-            <code>const userName</code>. Undefined is something we will run into very often! Whereas null is the
-            intentional lack of a value. For example if a user
-            ins not logged in, but we expect one at a later date we can do
-            this...<code>let loggedInUser = null</code>
-        <div class=""></div>
-        </p>
         <section>
-            <div class="container">
-                <h3>The Math Object</h3>
-                <p>
-                    The math object contains properties for math constants and functions! To access these we can use the
-                    following syntax <code>Math.floor()</code>. Math.floor will take a number and chop off the decimal.
-                    This
-                    is not rounding for this we need Math.round(). We are lookign at Math.random() and this gives us a
-                    random number between 0 and 1. Most of the time we want a whole number, not just a decimal. Let's
-                    say we
-                    want a random number bewteeen 1 and 10. This is the approach we will
-                    take..<code>Math.floor(Math.random() * 5) + 1</code>. We add 1 because Math.random starts at 0!
-                </p>
-                <img src="/assets/img/math_random.png" alt="code to create a random number">
+            <div class="container types-info primitives">
+                <div class="content-text">
+                    <h3>The Math Object</h3>
+                    <p>
+                        The math object contains properties for math constants and functions! To access these we can use
+                        the
+                        following syntax <code>Math.floor()</code>. Math.floor will take a number and chop off the
+                        decimal.
+                        This
+                        is not rounding for this we need Math.round(). We are lookign at Math.random() and this gives us
+                        a
+                        random number between 0 and 1. Most of the time we want a whole number, not just a decimal.
+                        Let's
+                        say we
+                        want a random number bewteeen 1 and 10. This is the approach we will
+                        take..<code>Math.floor(Math.random() * 5) + 1</code>. We add 1 because Math.random starts at 0!
+                    </p>
+                </div>
+                <div class="content-image">
+                    <img src="/assets/img/math_random.png" alt="code to create a random number">
+                </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 JavaScript Land. Built for learning JavaScript.</p>
-        </div>
-    </footer>
+    <div class="footer-placeholder"></div>
 </body>
 
 </html>
