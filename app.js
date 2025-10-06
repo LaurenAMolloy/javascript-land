@@ -867,6 +867,80 @@ function rollDie(numsides = 6){
     return Math.floor(Math.random() * numsides) + 1;
 }
 
+//Spread 
+const cats = ["teddy", "mooshee"];
+const dogs = ["ben", "benji"];
+
+const allPets = [...cats, ...dogs];
+console.log(allPets);
+
+const feline = {
+    legs: 4,
+    color: "black",
+    family: "felidae",
+    isFurry: true,
+}
+
+const feline2 = {
+    ...feline, 
+    eyeColor:"green"
+}
+
+//Rest
+//Will take our args and put them in an array :)
+function sum(...nums){
+    console.log(nums)
+}
+
+sum(2, 4, 6);
+//[2, 4, 6]
+
+//Destructuring
+//Arrays
+const scores = [50, 40, 30, 20, 10];
+const [gold, silver, bronze, ...everyOneElse] = scores;
+
+//Objects
+const user = {
+    id: 1,
+    name: "Jane Doe",
+    email: "jane.doe@example.com",
+    isActive: true,
+    roles: ["user", "admin"],
+    createdAt: new Date(),
+    
+    // Example method
+    greet() {
+      console.log(`Hello, my name is ${this.name}!`);
+    }
+  };
+
+  //Props to destructure
+  //Order does not matter
+  //default values added
+  const { id, name, email, died = "false" } = user;
+
+  function fullName ({ firstName, lastName}) {
+    console.log(`${firstName} ${lastName}`)
+  }
+
+//The DOM
+const selectImage = document.getElementById('codeImg');
+const imgElements = document.getElementsByTagName('img');
+
+// for(let img of imgElements){
+//     console.log(img.src)
+// }
+
+const images = document.getElementsByClassName("image");
+console.log(images);
+
+//Select all elements with done class
+const doneTodos = document.querySelectorAll(".done");
+
+//select checkbox
+const checkBox = document.querySelector('input[type="checkbox"]');
+console.log(checkBox);
 
 
 

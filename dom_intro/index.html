@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Land - Learn JavaScript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-placeholder"></div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="">
+                <h1 class="">THE DOM</h1>
+                <p class="">
+                    What is the DOM? The DOM stands for the Document Object Model. At it's core we have a set of objects
+                    that represent all the elements on a page. It is our portal into creating interactivity on a page.
+                    All interactive elements on a page are powered by JavaScript behind the scenes.
+                </p>
+            </div>
+            <div class="">
+                <img src="/assets/img/noun-dom-13029.png" alt="icon to represnt the DOM">
+            </div>
+        </section>
+        <section>
+            <h2>The DOM</h2>
+            <div class="">
+                <p>
+                    When our browser loads a web page, all the HTML elements are represented by the DOM. HTML elements
+                    go in...JS Objects come out. All of these objects have certain properties available. There is a
+                    relationship between these objects and how they are organised called a tree. This is a data
+                    structure. The top level object is called the <code>document</code>. The object has all of our
+                    properties and methods to help us manipulate the DOM! Use
+                    <code>console.dir(document) to see it all!</code>
+                </p>
+            </div>
+            <div class="image">
+                <img src="/assets/img/console-dir.png" alt="code with default params">
+            </div>
+        </section>
+        <section>
+            <h2>Selecting DOM Elements</h2>
+            <div class="">
+                <p>
+                    When we say select we mean to grab or retrieve and elemnt to do some specific task. For example we
+                    select a button so when a user clicks an action occurs. So first we select, then we manipulate! Here
+                    are some ways to acheive this...
+                </p>
+                <ul>
+                    <li><code>getElementById</code></li>
+                    <li><code>getElementByTagName</code></li>
+                    <li><code>getElementByClassName</code></li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="/assets/img/selectingElements.png" alt="" id="codeImg">
+            </div>
+        </section>
+        <section>
+            <h2>Get Elements by tagName</h2>
+            <div class="">
+                <p>
+                    This will return all elements with a specific tag name so all <code>img</code> or all
+                    <code>p</code>. In the console we will see a HTML collection. It looks like an array but it is not.
+                    We can iterate over the collection. What is inside the collection? An element.
+                </p>
+            </div>
+            <div class="image">
+                <img src="/assets/img/elementsByTag.png" alt="html collection">
+            </div>
+        </section>
+        <section>
+            <h2>Elements by Class</h2>
+            <div class="">
+                <p>
+                    We can add a class name to each element and use the class to retrieve all elements with the same
+                    class. If there are no elements with a specific class then we get an empty collection.
+                </p>
+                <div class="image">
+                    <img src="/assets/img/elementsByClass.png" alt="">
+                    <img src="/assets/img/className=console.png" alt="">
+                </div>
+        </section>
+        <section>
+            <h2>QuerySelector</h2>
+            <div class="">
+                <p>
+                    Is an all in one method used to select a single element. It is swiss army knife selector. the syntax
+                    is similar. We select by using <code>document.querySelector(".img")</code>. This provides us with
+                    the first match. But if we want all the elements then we us
+                    <code>document.querySelectorAll("#img")</code>. When we use selectorAll we are given a NodeList.
+                    What is a NodeList? We can select all descendents just like when we are styling in CSS, this is
+                    because we use CSS selectors to pass into the querySelector method. Now we can select elements let's
+                    do something with them!
+                </p>
+                <div class="image">
+                </div>
+        </section>
+        <section>
+            <h2>Query Selector Practice</h2>
+            <div class="">
+                <h1>Garden Todos</h1>
+                <input type="text" placeholder="New Todo">
+                <ul>
+                    <li>Start Seedlings</li>
+                    <li class="done">Deadhead Zinnias</li>
+                    <li class="done">Water Tomatoes</li>
+                    <li class="done">Harvest Potatoes</li>
+                    <li>Prune Roses</li>
+                </ul>
+                <label>Delete All</label>
+                <input type="checkbox" id="scales" name="scales" checked>
+            </div>
+            <div class="">
+                <img src="/assets/img/elementsPractice.png" alt="">
+            </div>
+
+        </section>
+    </main>
+    <div class="footer-placeholder"></div>
+</body>
+
+</html>
