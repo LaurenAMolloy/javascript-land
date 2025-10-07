@@ -1,41 +1,12 @@
-console.log("it works");
-
-//load nav
-async function loadNav(){
-try {
-    const response = await fetch("/nav.html");
-
-    if(!response.ok){
-        throw new Error(`${response.status}`)
-    }
-    const nav = await response.text();
-    //console.log(nav);
-    document.querySelector(".nav-placeholder").innerHTML = nav
-
-} catch (error) {
-  console.log(error)  
-}
-}
-
-loadNav();
-
-//load footer
-async function loadFooter(){
-    try {
-        
-    } catch (error) {
-        
-    }
-
-}
-
-//DOM
+//DOM Pages Logic
 //setAttribute
 //input.setAttribute("type", "text");
-
 //changing styles
-const h1 = document.querySelector('h1');
-h1.style.color = 'rgb(0, 108, 134)';
+
+//Make sure DOM elements are loaded before JS
+document.addEventListener('DOMContentLoaded', () => {
+    const h1 = document.querySelector('h1');
+h1.style.color = 'rgb(255, 255, 255)';
 
 //Styles Task 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
@@ -144,13 +115,11 @@ function colorize (){
 }
 
 
+})
 
 
-
-
-
+//Notes and Code for other pages...
 //Conditionals
-
 // console.log("Before");
 // let random = Math.random();
 // if(random > 0.5) {
@@ -158,6 +127,7 @@ function colorize (){
 //     console.log(random)
 // }
 // console.log("After");
+
 
 // const dayOfWeek = prompt("Enter a day!").toLowerCase() ;
 
@@ -170,6 +140,7 @@ function colorize (){
 // } else {
 //     console.log("MEH!")
 // }
+
 
 //const form = document.querySelector("form");
 
@@ -195,6 +166,7 @@ function colorize (){
 //     }
 // });
 
+
 //Truthy and Falsey
 //const userInput = prompt("Enter something");
 // if(userInput){
@@ -212,6 +184,7 @@ function colorize (){
 // } else if (age >= 10 && age <= 64) {
 //     console.log("$10");
 // }
+
 
 //SWITCH
 // const color = "purple"
@@ -257,7 +230,6 @@ function colorize (){
 // }
 
 //nested arrays
-
 // for(let i = 1; i <= 10; i++) {
 //     console.log(`i is: ${i}`);
 //     for(let j = 1; j <= 4; j++ ){
@@ -1063,10 +1035,6 @@ function colorize (){
 // const checkBox = document.querySelector('input[type="checkbox"]');
 // console.log(checkBox);
 
-
-
-
-
 //Reduce structure
 // let value = arr.reduce(function(accumulator, item, index, array) {
 
@@ -1086,4 +1054,3 @@ const avg = arr.reduce((acc, person ) => {
 //acc 0 acc + person.age 25
 //acc 25 acc + person.age 55
 //acc 55 acc + person.age 84
-
