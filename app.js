@@ -77,6 +77,78 @@ for(let i = 0; i < 100; i++){
     btnContainer.append(btn);   
 }
 
+//Events
+const eventBtn = document.querySelector('.eventDemo');
+eventBtn.onclick = function(){
+    console.log('You clicked me!')
+}
+
+function scream() {
+    //alert('Get off me!')
+}
+
+eventBtn.onmouseenter = scream;
+
+//EventLISTENER
+const hello = document.querySelector('.hello');
+const goodbye = document.querySelector('.goodbye');
+
+hello.addEventListener('click', function(){
+    if(hello.innerText === "Hello"){
+        hello.innerText = "Goodbye"
+    } else {
+        hello.innerText = "Hello" 
+    }
+});
+
+goodbye.addEventListener('click', function(){
+    if(goodbye.innerText === "Goodbye"){
+        goodbye.innerText = "Hello"
+    } else {
+        goodbye.innerText = "Goodbye" 
+    }
+});
+
+//Random Color Changer
+//Select the beackground div
+const backGround = document.querySelector('.randomColor');
+//Select the h3 color info
+const colorInfo = document.querySelector('.color-info');
+//Select the button
+const changeBgBtn = document.querySelector('.getRandomBg');
+
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 255) + 1;
+    const g = Math.floor(Math.random() * 255) + 1;
+    const b = Math.floor(Math.random() * 255) + 1;
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+changeBgBtn.addEventListener('click', function() {
+    const newColor = getRandomColor();
+    backGround.style.backgroundColor = newColor;
+    colorInfo.innerText = newColor;
+});
+
+//Select buttons
+const colorBtns = document.querySelectorAll('.eventBtn');
+
+//Add event listener to all buttons
+for(let button of colorBtns) {
+    button.addEventListener("click", colorize);
+}
+
+function colorize (){
+    this.style.backgroundColor = getRandomColor();
+    this.style.color = getRandomColor();
+}
+
+
+
+
+
+
+
 //Conditionals
 
 // console.log("Before");

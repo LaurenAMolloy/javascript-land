@@ -403,6 +403,38 @@ hr {
     color: #f5f5f5;
 }
 
+.randomColor {
+    height: 300px;
+    width: 100%;
+    padding: 2rem 0rem;
+    text-align: center;
+    background-color: rgb(65, 105, 225);
+    margin: 2rem 0;
+}
+
+.getRandomBg {
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+.randColorBtn-Container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.eventBtn {
+    width: 15%;
+    height: 100px;
+    font-family: inherit;
+    border: none;
+}
+
 /* Footer */
 .footer {
     background-color: var(--dark);

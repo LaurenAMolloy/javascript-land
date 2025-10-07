@@ -21,86 +21,104 @@
             <div class="">
                 <h1 class="">DOM EVENTS</h1>
                 <p class="">
+                    DOM events are the key to making interactive websites when a user does certain things like clicks,
+                    drags, drops, scrolls, keypresses, form submission or mouseover.
+                </p>
+            </div>
+            <div class="">
+                <img src="/assets/img/" alt="icon to represent DOM events">
+            </div>
+        </section>
+        <section>
+            <h2>Events in JavaScript!</h2>
+            <div class="">
+                <h3>Inline Events Suck!</h3>
+                <p>
+                    There are three ways to respond to user clicks. The first way is to do this is kinda janky! This
+                    involves adding an attribute called <code>onClick</code> and NOT recommended. It is not resuable and
+                    if we want the same functionality it is alot of copy and pasting. What if you have multiple buttons
+                    on the same page with the same behaviour? This approach will not work!
+                </p>
+            </div>
+            <div class="">
+                <button onclick="alert('you clicked me')">Click me!</button>
+            </div>
+        </section>
+        <section>
+            <h2>Another Way to Add Events</h2>
+            <div class="">
+                <p>
+                    The second way we are going to add an event is to create a function that runs when an element is
+                    clicked. This is done purely using JavaScript. This makes the functionality easier to reuse. Any
+                    element can be made interactive, we are not limited to buttons.
+                </p>
+                <button class="eventDemo">Click Me!</button>
+            </div>
+            <div class="">
+                <img src="/assets/img/event1.png" alt="">
+            </div>
+        </section>
+        <section>
+            <h2>Event Listeners</h2>
+            <div class="">
+                <h3>The best ways</h3>
+                <p>
+                    The best way to add an event is to add an event listener. We do this by selecting the element with
+                    query selector and adding and event listener. This will allow us to listen to any event we want!
+                    Here is a list of <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">events</a>.
+                    Why is this better? The first reason is we can apply as
+                    many callbacks as we want. You may have more than one callback to run on a certain element. We can
+                    also pass in options object to add extra control. In complex apps we may need to remove
+                    eventlisteners using <code>removeEventListener</code>
+                </p>
 
-                </p>
             </div>
             <div class="">
-                <img src="/assets/img/" alt="icon to represnt the DOM">
+                <h4>Click these buttons!</h4>
+                <button class="hello">Hello</button>
+                <button class="goodbye">Goodbye</button>
             </div>
         </section>
-        <section>
-            <h2>The DOM</h2>
-            <div class="">
-                <p>
-                    When our browser loads a web page, all the HTML elements are represented by the DOM. HTML elements
-                    go in...JS Objects come out. All of these objects have certain properties available. There is a
-                    relationship between these objects and how they are organised called a tree. This is a data
-                    structure. The top level object is called the <code>document</code>. The object has all of our
-                    properties and methods to help us manipulate the DOM! Use
-                    <code>console.dir(document) to see it all!</code>
-                </p>
-            </div>
-            <div class="image">
-                <img src="/assets/img/console-dir.png" alt="code with default params">
-            </div>
+        <section class="randomColor">
+            <h2>The Random Color Changer</h2>
+            <h3 class="color-info"></h3>
+            <button class="getRandomBg">Change Background</button>
         </section>
         <section>
-            <h2>Selecting DOM Elements</h2>
+            <h2>this and events</h2>
             <div class="">
                 <p>
-                    When we say select we mean to grab or retrieve and elemnt to do some specific task. For example we
-                    select a button so when a user clicks an action occurs. So first we select, then we manipulate! Here
-                    are some ways to acheive this...
+                    How does this relate to events? Let's take a look at the demo below to find out! Inside an event
+                    handler the keyword <code>this</code> generally refers to the keyword this. This allows us to
+                    separate our logic and make the code more modular.
                 </p>
-                <ul>
-                    <li><code>getElementById</code></li>
-                    <li><code>getElementByTagName</code></li>
-                    <li><code>getElementByClassName</code></li>
-                </ul>
             </div>
-            <div class="image">
-                <img src="/assets/img/selectingElements.png" alt="" id="codeImg">
+            <div class="randColorBtn-Container">
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
+                <button class="eventBtn">Click</button>
             </div>
-        </section>
-        <section>
-            <h2>Get Elements by tagName</h2>
             <div class="">
-                <p>
-                    This will return all elements with a specific tag name so all <code>img</code> or all
-                    <code>p</code>. In the console we will see a HTML collection. It looks like an array but it is not.
-                    We can iterate over the collection. What is inside the collection? An element.
-                </p>
+                <img src="/assets/img/this.png" alt="">
             </div>
-            <div class="image">
-                <img src="/assets/img/elementsByTag.png" alt="html collection">
-            </div>
-        </section>
-        <section>
-            <h2>Elements by Class</h2>
-            <div class="">
-                <p>
-                    We can add a class name to each element and use the class to retrieve all elements with the same
-                    class. If there are no elements with a specific class then we get an empty collection.
-                </p>
-                <div class="image">
-                    <img src="/assets/img/elementsByClass.png" alt="">
-                    <img src="/assets/img/className=console.png" alt="">
-                </div>
-        </section>
-        <section>
-            <h2>QuerySelector</h2>
-            <div class="">
-                <p>
-                    Is an all in one method used to select a single element. It is swiss army knife selector. the syntax
-                    is similar. We select by using <code>document.querySelector(".img")</code>. This provides us with
-                    the first match. But if we want all the elements then we us
-                    <code>document.querySelectorAll("#img")</code>. When we use selectorAll we are given a NodeList.
-                    What is a NodeList? We can select all descendents just like when we are styling in CSS, this is
-                    because we use CSS selectors to pass into the querySelector method. Now we can select elements let's
-                    do something with them!
-                </p>
-                <div class="image">
-                </div>
         </section>
         <section>
             <h2>Query Selector Practice</h2>
