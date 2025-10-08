@@ -1,123 +1,3 @@
-//DOM Pages Logic
-//setAttribute
-//input.setAttribute("type", "text");
-//changing styles
-
-//Make sure DOM elements are loaded before JS
-document.addEventListener('DOMContentLoaded', () => {
-    const h1 = document.querySelector('h1');
-h1.style.color = 'rgb(255, 255, 255)';
-
-//Styles Task 
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-
-//Grab elements
-const rainbow = document.querySelectorAll('span');
-
-rainbow.forEach((el, index) => {
-    el.style.color = colors[index]
-})
-
-//Toggle
-const list = document.querySelectorAll('.toggleDemo li');
-console.log(list)
-
-list.forEach((el) => {
-     el.classList.toggle('highlight');
-})
-
-//prepend
-document.querySelector('.createElements h3').prepend("❤️");
-
-//Create element
-const h4 = document.createElement('h4');
-//Add text
-h4.innerText = "JavaScript is awesome";
-
-const h3 = document.querySelector('.createElements h3');
-
-//insert to DOM
-h3.insertAdjacentElement('afterend', h4);
-
-//Task Create 100 Buttons!
-const btnContainer = document.querySelector(".btnContainer")
-for(let i = 0; i < 100; i++){
-    const btn = document.createElement('button');
-    number = parseInt([i])
-    btn.innerText = `BUTTON #${number + 1}`;
-    btnContainer.append(btn);   
-}
-
-//Events
-const eventBtn = document.querySelector('.eventDemo');
-eventBtn.onclick = function(){
-    console.log('You clicked me!')
-}
-
-function scream() {
-    //alert('Get off me!')
-}
-
-eventBtn.onmouseenter = scream;
-
-//EventLISTENER
-const hello = document.querySelector('.hello');
-const goodbye = document.querySelector('.goodbye');
-
-hello.addEventListener('click', function(){
-    if(hello.innerText === "Hello"){
-        hello.innerText = "Goodbye"
-    } else {
-        hello.innerText = "Hello" 
-    }
-});
-
-goodbye.addEventListener('click', function(){
-    if(goodbye.innerText === "Goodbye"){
-        goodbye.innerText = "Hello"
-    } else {
-        goodbye.innerText = "Goodbye" 
-    }
-});
-
-//Random Color Changer
-//Select the beackground div
-const backGround = document.querySelector('.randomColor');
-//Select the h3 color info
-const colorInfo = document.querySelector('.color-info');
-//Select the button
-const changeBgBtn = document.querySelector('.getRandomBg');
-
-function getRandomColor() {
-    const r = Math.floor(Math.random() * 255) + 1;
-    const g = Math.floor(Math.random() * 255) + 1;
-    const b = Math.floor(Math.random() * 255) + 1;
-    return `rgb(${r}, ${g}, ${b})`;
-}
-
-changeBgBtn.addEventListener('click', function() {
-    const newColor = getRandomColor();
-    backGround.style.backgroundColor = newColor;
-    colorInfo.innerText = newColor;
-});
-
-//Select buttons
-const colorBtns = document.querySelectorAll('.eventBtn');
-
-//Add event listener to all buttons
-for(let button of colorBtns) {
-    button.addEventListener("click", colorize);
-}
-
-function colorize (){
-    this.style.backgroundColor = getRandomColor();
-    this.style.color = getRandomColor();
-}
-
-
-})
-
-
 //Notes and Code for other pages...
 //Conditionals
 // console.log("Before");
@@ -1041,16 +921,18 @@ function colorize (){
 // }, [initial]);
 
 //Get Average age
-let john = { name: "John", age: 25 };
-let pete = { name: "Pete", age: 30 };
-let mary = { name: "Mary", age: 29 };
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 29 };
 
-const arr = [john, pete, mary]
+// const arr = [john, pete, mary]
 
-const avg = arr.reduce((acc, person ) => {
-    return acc + person.age
-}, 0) /arr.length
+// const avg = arr.reduce((acc, person ) => {
+//     return acc + person.age
+// }, 0) /arr.length
 
 //acc 0 acc + person.age 25
 //acc 25 acc + person.age 55
 //acc 55 acc + person.age 84
+
+

@@ -1,32 +1,51 @@
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Main JS loaded on every page");
-    //load nav
-async function loadNav(){
-    try {
-        const response = await fetch("/nav.html");
-    
-        if(!response.ok){
-            throw new Error(`${response.status}`)
-        }
-        const nav = await response.text();
-        //console.log(nav);
-        document.querySelector(".nav-placeholder").innerHTML = nav
-    
-    } catch (error) {
-      console.log(error)  
-    }
-    }
-    
+import { loadNav } from "./modules/htmlLoader.js";
+import { runDomDuex } from "./modules/dom_deux.js";
+
+document.addEventListener('DOMContentLoaded', () => {
     loadNav();
-    
-    //load footer
-    async function loadFooter(){
-        try {
-            
-        } catch (error) {
-            
-        }
-    
-    }
-  });
+    runDomDuex();
+})
+
+
+// for(let line = "#"; line.length < 8; line+= "#"){
+//    console.log(line);
+// }
+
+// //FizzBuzz
+// function fizzBuzz(){
+//     for(let i = 1; i < 100; i++){
+//         if([i] % 3 === 0){
+//             console.log([i],"fizz")
+//         }
+//         if([i] % 5 === 0){
+//             console.log([i], "buzz")
+//         }
+//         if([i] % 5 === 0 && [i] % 3 === 0){
+//             console.log([i], "fizzbuzz")
+//         }
+//     }
+// }
+
+// //function min
+// function min(num1, num2) {
+//     return num1 < num2 ? num1 : num2
+// }
+
+// //Bean Counting
+// function countB(str, B) {
+// let b = 0;
+// for(let char of str) {
+//     char === B ? b++ : b 
+// }
+// return b
+// };
+
+// function countChar(str, char) {
+//     let chartoCount = 0;
+//     for(let letter of str) {
+//         letter === char ? chartoCount++ : char 
+//     }
+//     return chartoCount
+// }
+
 

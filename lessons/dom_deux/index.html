@@ -7,8 +7,9 @@
     <title>JavaScript Land - The DOM Deux</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
-    <script src="/app.js" defer></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script type="module" src="/assets/js/main.js"></script>
+
 </head>
 
 <body>
@@ -121,158 +122,108 @@
             </div>
         </section>
         <section>
-            <h2>Query Selector Practice</h2>
             <div class="">
-                <h1>Garden Todos</h1>
-                <input type="text" placeholder="New Todo">
-                <ul>
-                    <li>Start Seedlings</li>
-                    <li class="done">Deadhead Zinnias</li>
-                    <li class="done">Water Tomatoes</li>
-                    <li class="done">Harvest Potatoes</li>
-                    <li>Prune Roses</li>
-                </ul>
-                <label>Delete All</label>
-                <input type="checkbox" id="scales" name="scales" checked>
+                <h2>The Event Object</h2>
+                <p>
+                    The is an event object that is created every time we click this object. It is an object constructed
+                    for me and it has infomation about the event. When working with key events we will often need to
+                    examine the event object. We can find out the name of the key pressed using the event obejct and
+                    logging it to the console. We can look at key and the code property! For example
+                    <code>console.log(e.key)</code>
+                </p>
+                <button class="eventObjDemo">Event</button>
+                <input class="evtInput" type="text">
+            </div>
+        </section>
+        <section>
+            <h2>Events and Forms</h2>
+            <div class="">
+                <h3>Form Events</h3>
+                <p>
+                    When we submit a form there is a default browser behaviour. We can use the
+                    <code>action="/shelter</code> this is the location where the form data will be sent. What is really
+                    important to note is the url the browser change. Our entire browser window will end up at that
+                    location. Sometimes that is a good thing. How do we prevent the form from submiiting and intercept
+                    the form data? We can use this method <code>e.preventDefault()</code>.
+                </p>
             </div>
             <div class="">
-                <img src="/assets/img/elementsPractice.png" alt="">
+                <h3>Extracting Form Data</h3>
+                <p>
+                    We are going to add elements from the form to the list below. First we select the input using
+                    <code>querySelector</code> and then we retrive the <code>input.value</code>
+                </p>
+                <h4>Cat List</h4>
+                <ul id="list"></ul>
             </div>
+            <div class="">
+                <h2>My Form Demo</h2>
+                <form action="/shelter" id="shelterform" class="formDemo">
+                    <input type="text" id="catName">
+                    <button>Submit</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <h2>Input and Change Events</h2>
+            <div class="">
+                <h3>What are Change Events?</h3>
+                <p>
+                    Change and inputs are events that change on every input, before waiting for a submit.
 
+                </p>
+            </div>
+            <div class="">
+                <p>
+                    Try typing in the input. The <code>change</code> input only fires when you leave the input. Just
+                    typing is not considered a change. If you want to watch each time the input change, use
+                    <code>input</code> this changes on EVERY SINGLE input. We have added this event listener to the
+                    input below!
+                </p>
+                <h4 class="displayInputText">Type Below:</h4>
+                <input id="change" type="text">
+            </div>
         </section>
         <section>
-            <h2>Properties and Methods</h2>
             <div class="">
-                <h3>TextContent, innerText and innerHTML </h3>
+                <h4>Event Bubbling!</h4>
                 <p>
-                    All of these properties are related to the text inside an element. We can grab any element in the
-                    dom and update the text with the following syntax:
+                    What is event bubbling? Event bubbling is when an event is triggered on an element. There may be
+                    other events triggered by this event. If we have nested elements they will be triggered each time.
+                    We can stop this bubbling by using <code>e.stopPropagation()</code>
                 </p>
-                <ul>
-                    <li><code>document.querySelector('p').textContent = "new text"</code></li>
-                    <li><code>document.querySelector('p').innerText = "new text"</code></li>
+            </div>
+            <div class="bubbleDemo">
+                <p onclick="alert('paragraph clicked')">
+                    <button class="bubble">Bubble Button</button>
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="">
+                <h4>Event Delegation</h4>
+                <p>
+                    This is a strategy for writing code using events. We add our event listener to a parent element
+                    instead of the individual elements. We can still listen for specific clicks on child elements. We
+                    use
+                    the event object for this. We are interested in the target inside the event. We are going to look at
+                    the target and
+                    check if it is an li and if it is we can remove it.
+                </p>
+            </div>
+            <div class="">
+                <h3>Event Delegation Demo</h3>
+                <h4>Shopping List</h4>
+                <p>Enter an item below to add an item to the list</p>
+                <form class="shoppingForm">
+                    <input type=text class="item">
+                    <input type=submit>
+                </form>
+                <ul class="shoppingList">
+                    <li class="listItem">I am a list item</li>
+                    <li class="listItem">I am a list item</li>
+                    <li class="listItem">I am a list Item</li>
                 </ul>
-                <p>
-                    The difference is that textContent recognises hidden elements set to <code>display: none</code>.
-                    Whereas innerText is sensitive to what is showing up at the moment.
-                </p>
-                <p>InnerHTML is useful for updating elements to valid HTML, not possible with textContent or innerText.
-                </p>
-            </div>
-        </section>
-        <section>
-            <h2>Attributes</h2>
-            <div class="">
-                <h3>What are attributes?</h3>
-                <p>
-                    There are so many attributes that live on elements. We can update them using JavaScript. We can get
-                    all the attributes on an element using <code>getAttribute</code> and change attributes using
-                    <code>setAttribute</code>. Be aware we are just accessing the html, we are not accessing the object
-                    in the DOM. Common attributes include:
-                </p>
-                <ul class="li">id</ul>
-                <ul class="li">class</ul>
-                <ul class="li">src</ul>
-                <ul class="li">href</ul>
-            </div>
-            <div class="">
-                <img src="/assets/img/setAttribute.jpeg" alt="">
-            </div>
-        </section>
-        <section>
-            <div class="">
-                <h3>Changing Styles</h3>
-                <p>
-                    The styles object does not contain the current styles of an element if you define them in a separate
-                    style sheet. It only conatins inline styles which are the the best way to do things. We can use the
-                    style object to change styles. Here is an example:
-                    <code>h1.style.color = "green"</code>. But we are writing inline styles using JavScript. There is a
-                    better way and this is to define a class! Since this style object is empty we can also inspect any
-                    elements style and this is using a special method called
-                    <code>window.getComputedStyle("element to inpspect")</code>
-                </p>
-            </div>
-            <div class="">
-                <div class="rainbowDiv">
-                    <h2>
-                        <span>R</span>
-                        <span>A</span>
-                        <span>I</span>
-                        <span>N</span>
-                        <span>B</span>
-                        <span>O</span>
-                        <span>W</span>
-                    </h2>
-                </div>
-                <img src="/assets/img/rainbow-task.png" alt="looping over spans to add css">
-            </div>
-        </section>
-        <section>
-            <div class="">
-                <h3>Classes</h3>
-                <p>
-                    To use classes the first thing we need to do is grab the element using querySelector. The second
-                    thing to do is use the property <code>classList</code>. To will allow us to add, remove and
-                    manipulate classLists on elements. We usually will toggle a classList on or off using JavaScript.
-                    For example dark or light mode. <code>h2.classList.toggle('purple')</code>
-                </p>
-            </div>
-            <div class="">
-                <h3>ClassList Example</h3>
-                <ul class="toggleDemo">
-                    <li>Hello</li>
-                    <li class="highlight">Hello</li>
-                    <li>Hello</li>
-                    <li>Hello</li>
-                    <li class="highlight">Hello</li>
-                    <li>Hello</li>
-                </ul>
-                <img src="/assets/img/toggle.png" alt="looping over spans to add css">
-            </div>
-        </section>
-        <section>
-            <div class="">
-                <h3>Traversing</h3>
-                <p>
-                    We can use <code>parentElement</code> to find the parent of any element. We can also use
-                    <code>children</code> to access child elements. Siblings are elements that all exist on the same
-                    level. There is previous and next sibling and they give us the corresponding node. A node is
-                    different from an element. Nodes can represent text. This can be white space or new lines. A better
-                    way is get access to the sibling is <code>nextElementSibling</code>.
-                </p>
-            </div>
-        </section>
-        <section>
-            <div class="createElements">
-                <h3>Creating Elements</h3>
-                <p>
-                    We can use <code>const newImg = document.createElement('img')</code> to create an element. Once we
-                    have made an element it
-                    needs to be added to the DOM. So we use the append property. First we need to describe the place
-                    where the element will be added, append property and then the element to be added like so:
-                    <code>document.body.appendChild(newImg)</code>. Once we have made the element we should add any
-                    propeties such as src before adding to the DOM. Prepend allows us to add an element as the first
-                    child. We can use <code>insertAdjacentElement</code> to go before or after an element.
-                </p>
-            </div>
-            <div class="">
-                <img src="/assets/img/100Btn.png" alt="">
-            </div>
-        </section>
-        <section>
-            <h3>Look At All My Buttons!</h3>
-            <div class="btnContainer">
-
-            </div>
-        </section>
-        <section>
-            <div class="">
-                <h3>Removing Elements</h3>
-                <p>
-                    When removing elements we can first select the parent, then use
-                    <code>parent.removeChild(child)</code>. There is also a property called remove that we can call
-                    directly on the element.
-                </p>
             </div>
         </section>
     </main>
