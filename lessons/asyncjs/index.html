@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Land - Async JS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script type="module" src="/assets/js/main.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-placeholder"></div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="">
+                <h1 class="">Async JavaScript</h1>
+                <p class="">
+
+                </p>
+            </div>
+            <div class="">
+                <img src="/assets/img/" alt="icon to represent async code">
+            </div>
+        </section>
+        <section>
+            <h2>The Call Stack</h2>
+            <div class="">
+                <p>
+                    The Call Stack is a mechanism that the JS interpreter uses to follow the order a script is excuted.
+                    The term <code>stack</code> refers to a basic ds in computer science. So for example last thing in -
+                    first thing out. Often we have functions that call other functions!
+                    In this case JavaScript needs to keep track of it's place. What Actually Happens:
+                </p>
+                <ul class="li">When a function is called, JavaScript adds (or “pushes”) that function onto the call
+                    stack — a data structure that keeps track of what function is currently running and what it needs to
+                    return to.</ul>
+                <ul class="li">If that function calls another function, JavaScript pauses the first one and adds the new
+                    function on top of the stack.</ul>
+                <ul class="li">When the inner function finishes, it’s “popped” off the stack, and control returns to the
+                    function below it (the one that called it).</ul>
+                <ul class="li">This continues until the stack is empty — meaning all functions have finished executing.
+                </ul>
+            </div>
+            <div class="">
+                <img src="" alt="callstack">
+            </div>
+        </section>
+        <section>
+            <h2>Single Threaded</h2>
+            <div class="">
+                <p>
+                    JavaScript is single threaded. This mean one line is excecuted at once. But what is that particulat
+                    script takes five seconds? Will everythig grind to a halt? Will our app just stop? There are work
+                    arounds. For example we have <code>setTimeout</code>. Settimeout expects a fucntion as an argument
+                    and a second argument as time in milliseconds! What happens? Well under the hood the browser (which
+                    is written in c++) takes care of this task. This includes any task that takes time. JavaScript is
+                    not in charge of this.
+                </p>
+            </div>
+            <div class="">
+                <img src="/assets/img/event1.png" alt="setTimeout">
+            </div>
+        </section>
+        <section class="callBackHell">
+            <h2>CallBack Hell!</h2>
+            <div class="">
+                <p>
+                    If we want certain scripts to execute consecutively after a certain period of time we can use nested
+                    callback functions! In the example we are using setTimeOut to change the background color of this
+                    section We could wrap this in a function to make it more reusable. But it does not really solve the
+                    problem. Another pattern of using callbacks taht is also very common. Something like if it works run
+                    this...If it doesn't work run this. Often we will have more than one callback passed intoi a
+                    function for asychronous tasks.
+                </p>
+            </div>
+            <div class="">
+            </div>
+        </section>
+        <section>
+            <h2>Promises Intro</h2>
+            <div class="">
+                <p>
+                    Promises are objects that represent the eventual completion or failure of an asynchronous operation.
+                    We might want to create a chain of three requests that are dependent on the previous request being
+                    successful. Prior to promises two callbacks, success and failure, were added to requests. The result
+                    was callback hell. Promises are the solution to this problem! What does the syntax look like?
+                </p>
+            </div>
+            <div class="">
+                <img src="" alt="">
+            </div>
+        </section>
+        <section>
+            <h2>The Magic of Promises</h2>
+            <div class="">
+                <p>
+                    A promise is an object! A return value or an error will be represented. We can save a promise to a
+                    variable and view it in teh console. We can see three states <code>pending</code>,
+                    <code>resolved</code> or <code>rejected</code>. We can attach callbacks to the promise. We use
+                    <code>.then</code> to branch for success and <code>.catch</code> for errors. Our code immediatley
+                    becomes flatter and more
+                    readable.
+                </p>
+            </div>
+            <div class="">
+                <img src="/assets/img/this.png" alt="">
+            </div>
+        </section>
+        <section>
+            <div class="">
+                <h2>The Event Object</h2>
+                <p>
+                    The is an event object that is created every time we click this object. It is an object constructed
+                    for me and it has infomation about the event. When working with key events we will often need to
+                    examine the event object. We can find out the name of the key pressed using the event obejct and
+                    logging it to the console. We can look at key and the code property! For example
+                    <code>console.log(e.key)</code>
+                </p>
+                <button class="eventObjDemo">Event</button>
+                <input class="evtInput" type="text">
+            </div>
+        </section>
+        <section>
+            <h2>Events and Forms</h2>
+            <div class="">
+                <h3>Form Events</h3>
+                <p>
+                    When we submit a form there is a default browser behaviour. We can use the
+                    <code>action="/shelter</code> this is the location where the form data will be sent. What is really
+                    important to note is the url the browser change. Our entire browser window will end up at that
+                    location. Sometimes that is a good thing. How do we prevent the form from submiiting and intercept
+                    the form data? We can use this method <code>e.preventDefault()</code>.
+                </p>
+            </div>
+            <div class="">
+                <h3>Extracting Form Data</h3>
+                <p>
+                    We are going to add elements from the form to the list below. First we select the input using
+                    <code>querySelector</code> and then we retrive the <code>input.value</code>
+                </p>
+                <h4>Cat List</h4>
+                <ul id="list"></ul>
+            </div>
+            <div class="">
+                <h2>My Form Demo</h2>
+                <form action="/shelter" id="shelterform" class="formDemo">
+                    <input type="text" id="catName">
+                    <button>Submit</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <h2>Input and Change Events</h2>
+            <div class="">
+                <h3>What are Change Events?</h3>
+                <p>
+                    Change and inputs are events that change on every input, before waiting for a submit.
+
+                </p>
+            </div>
+            <div class="">
+                <p>
+                    Try typing in the input. The <code>change</code> input only fires when you leave the input. Just
+                    typing is not considered a change. If you want to watch each time the input change, use
+                    <code>input</code> this changes on EVERY SINGLE input. We have added this event listener to the
+                    input below!
+                </p>
+                <h4 class="displayInputText">Type Below:</h4>
+                <input id="change" type="text">
+            </div>
+        </section>
+        <section>
+            <div class="">
+                <h4>Event Bubbling!</h4>
+                <p>
+                    What is event bubbling? Event bubbling is when an event is triggered on an element. There may be
+                    other events triggered by this event. If we have nested elements they will be triggered each time.
+                    We can stop this bubbling by using <code>e.stopPropagation()</code>
+                </p>
+            </div>
+            <div class="bubbleDemo">
+                <p onclick="alert('paragraph clicked')">
+                    <button class="bubble">Bubble Button</button>
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="">
+                <h4>Event Delegation</h4>
+                <p>
+                    This is a strategy for writing code using events. We add our event listener to a parent element
+                    instead of the individual elements. We can still listen for specific clicks on child elements. We
+                    use
+                    the event object for this. We are interested in the target inside the event. We are going to look at
+                    the target and
+                    check if it is an li and if it is we can remove it.
+                </p>
+            </div>
+            <div class="">
+                <h3>Event Delegation Demo</h3>
+                <h4>Shopping List</h4>
+                <p>Enter an item below to add an item to the list</p>
+                <form class="shoppingForm">
+                    <input type=text class="item">
+                    <input type=submit>
+                </form>
+                <ul class="shoppingList">
+                    <li class="listItem">I am a list item</li>
+                    <li class="listItem">I am a list item</li>
+                    <li class="listItem">I am a list Item</li>
+                </ul>
+            </div>
+        </section>
+        <section class="score">
+            <h2>Score Keeper</h2>
+            <div class="score-container">
+                <img class="scoreImg" src="/assets/img/tennis.png" alt="tennis icon">
+                <h3 id="scoreKeeper">Score Keeper</h3>
+                <p id="results"><span class="p1Display">0</span> to <span class="p2Display">0</span></p>
+                <p>Use the buttons below to keep score</p>
+                <form id="scoreForm">
+                    <label for="playTo">Number of Plays</label>
+                    <select name="playTo" id="playTo">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </form>
+                <div class="button-container">
+                    <button id="p1Btn">+Player 1</button>
+                    <button id="p2Btn">+ Player 2</button>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="footer-placeholder"></div>
+</body>
