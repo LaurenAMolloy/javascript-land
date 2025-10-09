@@ -145,7 +145,7 @@ shoppingForm.addEventListener('submit', function(e) {
 
 const allLis = document.querySelectorAll('.listItem');
 for(let li of allLis){
-    console.log(li);
+    //console.log(li);
 }
 
 //Remove items from list
@@ -153,6 +153,68 @@ shoppingList.addEventListener('click', function(e){
     if(e.target.classList.contains('listItem')) {
         remove()};
 })
+
+//Score Keeper Game
+//Retrieve elements from the DOM
+const p1 = {
+    score: 0,
+    btn: document.querySelector('#p1Btn'),
+    display: document.querySelector('.p1Display'),
+}
+const p2 = {
+    score: 0,
+    btn: document.querySelector('#p2Btn'),
+    display: document.querySelector('.p2Display'),
+}
+
+const winningScoreSelect = document.querySelector('#playTo');
+const resetBtn = document.querySelector('#reset');
+let winningScore = 3;
+let isGameOver = false;
+
+//If we wanted to add more players we would need to add an array of opponents!
+function updateScore(player, opponent) {
+    if(!isGameOver) {
+        player.score ++;
+        if(player.score === winningScore) {
+            isGameOver = true;
+            player.display.classList.add('winner');
+            opponent.display.classList.add('loser');
+            //player.button.disabled = true;
+            opponent.button.disabled = true;
+        } 
+        player.display.innerText = player.score;
+    }
+}
+
+//Set number of plays
+winningScoreSelect.addEventListener('change', function() {
+    winningScore = parseInt(this.value);
+    reset();
+});
+
+p1.btn.addEventListener('click', () => {
+    updateScore(p1, p2);
+});
+
+
+p2.btn.addEventListener('click', () => {
+    updateScore(p2, p1);
+});
+
+//Reset
+resetBtn.addEventListener('click', reset)
+
+function reset() {
+    //Reset the game
+    isGameOver = false;
+    for(let p of [p1, p2]){
+        p.score = 0;
+        p.display.textContent = 0;
+        p.display.classList.remove('winner', 'loser')
+        //p.button.disabled = false
+    } 
+}
 
 
 

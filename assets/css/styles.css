@@ -435,6 +435,82 @@ hr {
     border: none;
 }
 
+#results span {
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 0rem 1rem;
+    border-radius: .5rem;
+}
+
+.scoreImg {
+    max-width: 50%;
+}
+
+.score {
+    padding: 3rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #448aff;
+}
+
+.score-container {
+    width: 400px;
+    height: 400px;
+    border: 4px solid #e040fb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: #f5f5f5;
+    margin-top: 2rem;
+}
+
+.winner {
+    background-color: greenyellow;
+}
+
+.loser {
+    background-color: #ff4081;
+}
+
+.reset {
+    background-color: #f5f5f5;
+}
+
+.button-container {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#p1Btn,
+#p2Btn,
+#reset {
+    border: none;
+    font-family: inherit;
+    padding: .8rem .8rem;
+    border-radius: 1rem;
+}
+
+#p1Btn {
+    background-color: #ffff00;
+    color: #212121;
+}
+
+#p2Btn {
+    background-color: #448aff;
+    color: #212121;
+}
+
+#reset {
+    background-color: #ff4081;
+    color: #212121;
+}
+
 /* Footer */
 .footer {
     background-color: var(--dark);

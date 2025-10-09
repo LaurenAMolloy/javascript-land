@@ -226,6 +226,33 @@
                 </ul>
             </div>
         </section>
+        <section class="score">
+            <h2>Score Keeper</h2>
+            <div class="score-container">
+                <img class="scoreImg" src="/assets/img/tennis.png" alt="tennis icon">
+                <h3 id="scoreKeeper">Score Keeper</h3>
+                <p id="results"><span class="p1Display">0</span> to <span class="p2Display">0</span></p>
+                <p>Use the buttons below to keep score</p>
+                <form id="scoreForm">
+                    <label for="playTo">Number of Plays</label>
+                    <select name="playTo" id="playTo">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </form>
+                <div class="button-container">
+                    <button id="p1Btn">+Player 1</button>
+                    <button id="p2Btn">+ Player 2</button>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+        </section>
     </main>
     <div class="footer-placeholder"></div>
 </body>
