@@ -1,11 +1,9 @@
 import { loadNav } from "./modules/htmlLoader.js";
-import { runDomDuex } from "./modules/dom_deux.js";
-import { runAsyncJs } from "./modules/asyncjs.js";
+import { asyncjs } from "./modules/asyncjs.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     loadNav();
-    //runDomDuex();
-    runAsyncJs();
+    asyncjs();
 })
 
 

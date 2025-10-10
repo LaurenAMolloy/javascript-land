@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Land - Async JS</title>
+    <title>JavaScript Land - AJAX</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css">
@@ -19,7 +19,7 @@
     <main class="main">
         <section class="hero">
             <div class="">
-                <h1 class="">Async JavaScript</h1>
+                <h1 class="">Ajax and API's</h1>
                 <p class="">
 
                 </p>
@@ -29,23 +29,14 @@
             </div>
         </section>
         <section>
-            <h2>The Call Stack</h2>
+            <h2>requests</h2>
             <div class="">
                 <p>
-                    The Call Stack is a mechanism that the JS interpreter uses to follow the order a script is excuted.
-                    The term <code>stack</code> refers to a basic ds in computer science. So for example last thing in -
-                    first thing out. Often we have functions that call other functions!
-                    In this case JavaScript needs to keep track of it's place. What Actually Happens:
+                    We make requests ALL the time. We can make a request from code. This is called AJAX and refers to
+                    code that interacts with a server to request data. We can see in the notwork tab any infotmation
+                    that has been loaded.
                 </p>
-                <ul class="li">When a function is called, JavaScript adds (or “pushes”) that function onto the call
-                    stack — a data structure that keeps track of what function is currently running and what it needs to
-                    return to.</ul>
-                <ul class="li">If that function calls another function, JavaScript pauses the first one and adds the new
-                    function on top of the stack.</ul>
-                <ul class="li">When the inner function finishes, it’s “popped” off the stack, and control returns to the
-                    function below it (the one that called it).</ul>
-                <ul class="li">This continues until the stack is empty — meaning all functions have finished executing.
-                </ul>
+
             </div>
             <div class="">
                 <img src="" alt="callstack">
@@ -122,9 +113,6 @@
             </div>
             <div class="promiseDemo">
             </div>
-            <div class="">
-                <img src="/assets/img/promises.png" alt="">
-            </div>
         </section>
         <section>
             <h2>Async Functions</h2>
@@ -137,9 +125,6 @@
                     async and the purpose of this keyword is to wait until the promise is resolved! In the demo when
                     each promise is resolved the next line will run!
                 </p>
-            </div>
-            <div class="">
-                <img src="/assets/img/await-async.png" alt="">
             </div>
             <div class="asyncColorChanger"></div>
             <div class="">

@@ -454,6 +454,13 @@ code {
     transition: 1s linear;
 }
 
+.promiseDemo,
+.asyncColorChanger {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #212121;
+}
+
 /* =============================
    FOOTER
 ============================= */
