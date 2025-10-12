@@ -9,6 +9,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script type="module" src="/assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -21,118 +22,145 @@
             <div class="">
                 <h1 class="">Ajax and API's</h1>
                 <p class="">
-
-                </p>
-            </div>
-            <div class="">
-                <img src="/assets/img/" alt="icon to represent async code">
-            </div>
-        </section>
-        <section>
-            <h2>requests</h2>
-            <div class="">
-                <p>
                     We make requests ALL the time. We can make a request from code. This is called AJAX and refers to
-                    code that interacts with a server to request data. We can see in the notwork tab any infotmation
-                    that has been loaded.
+                    code that interacts with a server to request data to display in the browser. We can see in the
+                    network response tab any information
+                    that has been loaded. When we just want data to use on website, for example live price of the
+                    stockmarket, we can request that data without refreshing the page. We usually recieve this data in
+                    the JSON format. What is JSON?
                 </p>
+            </div>
+            <div class="">
+                <img src="/assets/img/" alt="icon to represent request code">
+            </div>
+        </section>
+        <section class="container">
+            <h2>API</h2>
+            <div class="">
+                <p>
+                    API refers to Application Programming Interface. It is an interface that responds to HTTP(Hyper Text
+                    Transfer Protocal) requests. When we access data this way we access an end point that exposes
+                    specific data in JSON format. We can access data for weather, bitcoin, twitter, share facebook posts
+                    or auto-response to mentions in instagram. So not only can we retrieve data we can send data via
+                    HTTPS requests.
+                </p>
+            </div>
+            <div class="">
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="container">
+            <h2>XML</h2>
+            <div class="">
+                <p>
+                    XML is a way to store data, it is not commonly used. These days we use JSON which refers to
+                    JavaScript Object Notation. JSON data looks like an object in unordered sets of key/value pairs.
+                    Keys are stored in double quotes. JSON is not exclusively made for JavaScript. JSON can be used by
+                    other languages. We receive the data as a big string. We parse the information using the JSON()
+                    method into a valid JavaScript object. We can convert our data into JSON using JSON.stringify(),
+                    this allows us to share information via JSON.
+                </p>
+            </div>
+            <div class="">
+                <img src="" alt="JSON">
+            </div>
+        </section>
+        <section class="container">
+            <h2>POSTMAN!</h2>
+            <div class="">
+                <p>
+                    <a href="https://www.postman.com/">Postman</a>is a tool, you can also use <a
+                        href="https://hoppscotch.io/">hoppscotch.</a>. They are used to test your own API's. They are
+                    made for developers. We can amke requests from the browser. We will be using <a
+                        href="https://swapi.dev/"></a>swappi and can test the
+                    endpoints using Postman.
+                </p>
+            </div>
+            <div class="">
+            </div>
+        </section>
+        <section class="container">
+            <h2>HTTP Verbs and Status Codes</h2>
+            <div class="">
+                <p>
+                    We use these verbs to define the type of request we will make. A <code>GET</code> request is used to
+                    retreive information. Whereas a <code>POST</code> request is usually used when we want to send data
+                    to a server. Status codes are just code that comes back from a HTTP code. 200 is the most common and
+                    this means the request was a success. If we get a 404 this is usually when you make a request that
+                    is not found. Codes that start with 300 usually mean some kind of redirection.
+                </p>
+            </div>
+            <div class="">
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="container">
+            <h2>Understanding Query Strings</h2>
+            <div class="">
+                <p>
+                    There will be times when we want to access specific resources and add variables to our end points.
+                    In the example the colon indicates this: <code>/people/:id/</code>. We can also use a query string.
+                    They are made up of key value pairs and separated by ampersand like this
+                    <code>sort=desc&color=blue</code>. If we search on a site we will see the query string in the URL.
+                    Normally the server is set up to look for a value called q and uses the search as the value. Some
+                    endpoints require two queryStrings. Headers are additional pairs of information that go along with
+                    the request. We also receive headers in the response. Some API's are set up in a way we have to send
+                    headers. We can set headers in postman or hopp scotch.
+                </p>
+            </div>
+            <div class="">
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="container">
+            <h2>Making XMLHttp Request</h2>
+            <div class="">
+                <p>
+                    This is the old school way of doing things! It does not support callbacks. There is lots of weird
+                    caps and it has a clunky syntax. Let's go!
+                </p>
+            </div>
+            <div class="">
+                <img src="" alt="">
+            </div>
+        </section>
+        <section class="container">
+            <h2>Fetch is Awesome!</h2>
+            <h3>Fetch supports promises!</h3>
+            <div class="">
+                <p>
+                    When we use <code>fetch()</code> we are returned a promise! A request is sent to a URL, if resolved
+                    we pass the value to a .then() success handler. We then use the <code>.json()</code> method to parse
+                    the data. Pass it to another .then success handler and log our data to the console. This is so much
+                    better than xml because our code is flat, there is no nesting and we can make a second request very
+                    easily!
+                </p>
+            </div>
+            <div class="">
 
             </div>
             <div class="">
-                <img src="" alt="callstack">
+                <h3>Axios</h3>
+                <p>
+                    Axios is a library used to make requests. It does everything in one line and combines fetch and the
+                    json method in one line. We can also use axios to set headers. We can pass headers into axios.get as
+                    a second argument in the form of a config object.
+                </p>
+            </div>
+            <div class="dadJokes-Container">
+                <h4>Click to get a Joke!</h4>
+                <button class="dadJoke-btn">Click Me!</button>
+                <p class="dad-joke"></p>
             </div>
         </section>
-        <section>
-            <h2>Single Threaded</h2>
-            <div class="">
-                <p>
-                    JavaScript is single threaded. This mean one line is excecuted at once. But what is that particulat
-                    script takes five seconds? Will everythig grind to a halt? Will our app just stop? There are work
-                    arounds. For example we have <code>setTimeout</code>. Settimeout expects a fucntion as an argument
-                    and a second argument as time in milliseconds! What happens? Well under the hood the browser (which
-                    is written in c++) takes care of this task. This includes any task that takes time. JavaScript is
-                    not in charge of this.
-                </p>
-            </div>
-            <div class="">
-                <img src="" alt="setTimeout">
-            </div>
-        </section>
-        <section class="callBackHell">
-            <h2>CallBack Hell!</h2>
-            <div class="">
-                <p>
-                    If we want certain scripts to execute consecutively after a certain period of time we can use nested
-                    callback functions! In the example we are using setTimeOut to change the background color of this
-                    section We could wrap this in a function to make it more reusable. But it does not really solve the
-                    problem. Another pattern of using callbacks taht is also very common. Something like if it works run
-                    this...If it doesn't work run this. Often we will have more than one callback passed intoi a
-                    function for asychronous tasks.
-                </p>
-            </div>
-            <div class="">
-            </div>
-        </section>
-        <section>
-            <h2>Promises Intro</h2>
-            <div class="">
-                <p>
-                    Promises are objects that represent the eventual completion or failure of an asynchronous operation.
-                    We might want to create a chain of three requests that are dependent on the previous request being
-                    successful. Prior to promises two callbacks, success and failure, were added to requests. The result
-                    was callback hell. Promises are the solution to this problem! What does the syntax look like? Let's
-                    take a look in the next section!
-                </p>
-            </div>
-            <div class="">
-                <img src="" alt="">
-            </div>
-        </section>
-        <section>
-            <h2>The Magic of Promises</h2>
-            <div class="">
-                <p>
-                    We can make a request and have a <code>.then</code> to handle the success value. We can the return
-                    another promise and inside the next success handler return another promise. We can use a single
-                    <code>.catch</code> for each request! If at any point our promises are not resolved our .catch will
-                    run.
-                </p>
-            </div>
-            <div class="">
-                <img src="" alt="">
-            </div>
-        </section>
-        <section>
-            <h2>Let's Write a Promise!</h2>
-            <div class="">
-                <p>
-                    First we create a promise using the <code>new Promise</code> keyword and pass in a function with two
-                    paramaters, resolve and reject which represent the resolution of the promise. If at any point you
-                    call resolve, the promise will be resolved and if you call reject the promis will be rejected!
-                </p>
-            </div>
-            <div class="promiseDemo">
-            </div>
-        </section>
-        <section>
-            <h2>Async Functions</h2>
-            <h3>Syntactical Sugar!</h3>
-            <div class="">
-                <p>
-                    Async and await make promises pretty! In terms of our code. When we place the word
-                    <code>async</code> in front of a function the value we are returned is resolved with a promise. If
-                    there are any errors we can throw an Error and the promise is magically rejected. Await is used with
-                    async and the purpose of this keyword is to wait until the promise is resolved! In the demo when
-                    each promise is resolved the next line will run!
-                </p>
-            </div>
-            <div class="asyncColorChanger"></div>
-            <div class="">
-                <h3>Errors!</h3>
-                <p>
-                    What about errors? We can use a try.catch block which basically is saying to JavaScript. If this
-                    code results in an error being thrown we are going to catch it and handle it here!
-                </p>
+        <section class="container">
+            <div class="tv-search">
+                <h3>TV Search</h3>
+                <form class="tvForm">
+                    <input type="text" placeholder="TV show title" name="query">
+                    <button class="tvSearchBtn">Search</button>
+                </form>
+                <div class="tvImgContainer"></div>
             </div>
         </section>
     </main>

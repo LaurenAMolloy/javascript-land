@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Types</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <script src="/app.js" defer></script>
+    <script type="module" src="/assets/js/main.js"></script>
 </head>
 
 <body>
@@ -59,9 +59,6 @@
         </section>
         <section class="content">
             <div class="container types-info primitives">
-                <div class="content-img">
-                    <img class="console-code" src="/assets/img/math_operations.png">
-                </div>
                 <div class="content-text">
                     <h2>Numbers</h2>
                     <p>
@@ -77,6 +74,9 @@
                         <li><code>division /</code></li>
                         <li><code>module %</code></li>
                     </ul>
+                </div>
+                <div class="content-img">
+                    <img class="console-code" src="/assets/img/math_operations.png">
                 </div>
             </div>
         </section>
@@ -103,13 +103,6 @@
         <section>
             <div class="container types-info primitives">
                 <div class="content-text">
-                    <h4>NaN</h4>
-                    <p>
-                        NaN is a number, but represent a value that is not a number. So for example if you use
-                        <code>typeOf NaN</code> this will return a number.
-                    </p>
-                </div>
-                <div class="content-text">
                     <h4>Null and undefined</h4>
                     <p>
                         There are two primitive types which are very simple compared to strings. Both are single values
@@ -121,6 +114,13 @@
                         intentional lack of a value. For example if a user
                         ins not logged in, but we expect one at a later date we can do
                         this...<code>let loggedInUser = null</code>
+                </div>
+                <div class="content-text">
+                    <h4>NaN</h4>
+                    <p>
+                        NaN is a number, but represent a value that is not a number. So for example if you use
+                        <code>typeOf NaN</code> this will return a number.
+                    </p>
                 </div>
             </div>
         </section>
