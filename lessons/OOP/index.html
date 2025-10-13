@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP - JavaScript Land</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script type="module" src="/assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+</body>
+<header class="header">
+    <div class="nav-placeholder"></div>
+</header>
+<main class="main">
+    <section class="hero">
+        <div class="">
+            <h1 class="">OOP in JavaScript</h1>
+            <p class="">
+
+            </p>
+        </div>
+        <div class="">
+            <img src="/assets/img/" alt="icon to represent request code">
+        </div>
+    </section>
+    <section class="container">
+        <h2>Prototypes</h2>
+        <div class="">
+            <p>
+                When we look at an array in the console, we see this <code>_proto_</code>. What is the prototype? If we
+                take an array as an example. An
+                array has so many methods that we use all the time. All of those properties live in a property call
+                <code>_proto_</code>. The prototype conatins all of the methods we use. BUT the methods do not live on
+                every array we make. They live on the prototype! It does matter! Each array has a reference to the proto
+                so we can amke use of all the methods! In simplistic terms a prototype is a template! What is the
+                different between <code>_proto_</code> and <code>prototype</code>? Prototype is the actual mama object
+                whereas
+                _proto_ is a just a reference to the mama!
+            </p>
+        </div>
+        <div class="">
+            <img src="/assets/img/array_prototype.png" alt="">
+        </div>
+    </section>
+    <section class="container">
+        <h2>Factory Functions</h2>
+        <div class="">
+            <p>
+                OOP is all about one central idea. That is breaking our code up into objects. We will look at an example
+                of where colors are represented using objects. There are a few color systems we work with in web
+                develeopment such as Red, Blue, Green values: <code>rgb(244, 54, 23)</code>, Hexidecimal values:
+                <code>#76FF32</code> and Hue Saturation Light values, <code>hsl(180, 50%, 30%)</code>. We can make
+                recipes that create new objects with methods and propertoes baked in. We are essentially using a cookie
+                cutter. In the code the following things happen...
+            </p>
+            <ul class="li">We pass in values</ul>
+            <ul class="li">We create an object</ul>
+            <ul class="li">We add some methods</ul>
+            <ul class="li">We return that object</ul>
+        </div>
+        <img src="/assets/img/Factory-Function.png" alt="code example in JavaScript for factory function">
+    </section>
+    <section class="container">
+        <h2>Constructor Functions</h2>
+        <div class="">
+            <p>
+                Why do we need a better solution than factory functions? If we check if the methods we are using in
+                makeColor are equal they are not. That is because a new method is created for each object, so they are
+                not
+                equal. If we tried the same thing with a string then then we would get true returned to us in the
+                console. This is because string methods are not defined on every single string! The same applies to
+                arrays. This is where the constructor functions enters!
+            </p>
+        </div>
+        <div class="">
+            <img src="/assets/img/Factory-Function-Problems.png" alt="">
+            <img src="/assets/img/slice-method.png" alt="">
+        </div>
+    </section>
+    <section class="container">
+        <h2>Let's Make a Constructor Function</h2>
+        <div class="">
+            <p>
+                We create a constructor function using the function keyword, function name and then assign properties
+                inside the function using <code>this</code>. Then to use the constructor function to make our new color
+                object we need to use the <code>new</code> keyword. This is what happens...
+            </p>
+            <ul class="li">Creates a blank object</ul>
+            <ul class="li">Links this object to another</ul>
+            <ul class="li">Passes the newly craeted object from step 1 to this</ul>
+            <ul class="li">Returns this</ul>
+            <p>
+                If we do not use the new keyword this will refer to the window. Now when we check in the console if
+                <code>>color1.hex === color2.hex</code> this will be true because they are the same methods stored on
+                the original constructor. The syntax is kind of annoying and this is where classes come in.
+            </p>
+        </div>
+        <div class="">
+            <img src="/assets/img/constructor.png" alt="">
+
+        </div>
+    </section>
+    <section class="container">
+        <h2>Classes</h2>
+        <div class="">
+            <p>
+                Classes are just syntactical sugar. This means it is a nicer way of building a new object. The steps are
+                as follows...
+            </p>
+            <ul class="li">Creates a class</ul>
+            <ul class="li">Call constructor which runs straight away and pass in any arguments</ul>
+            <ul class="li">Use this to assign properties to the return object</ul>
+            <ul class="li"></ul>
+            <p>
+            </p>
+        </div>
+        <div class="">
+            <img src="/assets/img/Classes.png" alt="">
+        </div>
+    </section>
+    <section class="container">
+        <h2>Extends and Super</h2>
+        <div class="">
+            <p>
+                In JavaScript, the class syntax provides a cleaner, more structured way to work with objects and
+                inheritance. When you have a base class—say, Pet—and you want to create specific types like Dog or Cat,
+                you can use the extends keyword to inherit properties and methods from that base class.
+            </p>
+            <p>
+                This means that both Dog and Cat can share all the common functionality from Pet without needing to
+                rewrite it. The extends keyword is incredibly useful because it helps keep your code DRY (Don’t Repeat
+                Yourself) and makes it easier to maintain and scale.
+            </p>
+            <p>
+                When you extend a class, you can also call the parent class’s constructor and methods using the super
+                keyword. This allows your subclass to build upon the base class’s functionality while still adding its
+                own unique behavior.
+            </p>
+        </div>
+        <div class="">
+            <img src="" alt="">
+        </div>
+    </section>
+</main>
+
+</html>

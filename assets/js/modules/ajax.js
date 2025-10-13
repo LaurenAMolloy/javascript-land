@@ -114,5 +114,14 @@ const makeImg = (shows) => {
     });
 }
 
+const getUserData = async () => {
+    try {
+       const res = await axios.get('https://api.example.com/users/1');
+       return res 
+    } catch (err) {
+        console.log(err)
+    }
+    
+}
 
 }

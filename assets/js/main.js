@@ -1,11 +1,13 @@
 import { loadNav } from "./modules/htmlLoader.js";
 import { asyncjs } from "./modules/asyncjs.js";
 import { runAjax } from "./modules/ajax.js";
+import { runOop } from "./modules/OOP.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     loadNav();
     //asyncjs();
-    runAjax();
+    //runAjax();
+    runOop();
 })
 
 

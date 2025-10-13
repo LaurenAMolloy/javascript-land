@@ -504,7 +504,7 @@ code {
 }
 
 .tv-search {
-    background-color: #666666;
+    background-color: #448aff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -516,6 +516,18 @@ code {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #212121;
+}
+
+.box2 {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #212121;
 }
 
 /* =============================
